@@ -15,7 +15,7 @@
             font-family: 'Roboto Condensed', sans-serif; 
             /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
         }
-          /* Estils per al títol */
+          
         h1 {
             color: white;
             text-align: center; /* Centrat */
@@ -38,6 +38,23 @@
              font-family: 'Cabin', sans-serif; 
              font-size: 20px;
          }
+
+         .titol-i-logo {
+             display: flex; /* Utilitzem flexbox per alinear contingut */
+             align-items: center; /* Centrem verticalment el contingut */
+         }
+         
+         .titol-i-logo h1 {
+             margin-right: 20px; /* Espai entre el títol i la imatge */
+         }
+         
+         .titol-i-logo img {
+             width: 200px; /* Amplada de la imatge */
+             height: 200px; /* Alçada de la imatge */
+             object-fit: cover; /* Manté la proporció de la imatge */
+             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+         }
+
          
         /* Estils per a les seccions com a quadres de text amb colors alternats */
         section {
@@ -88,7 +105,10 @@
     </style>
 </head>
 <body>
-    <h1>BENVINGUDES EXCURSIONISTES!</h1>
+    <div class="titol-i-logo">
+        <h1>BENVINGUDES EXCURSIONISTES!</h1>
+        <img src="fancyfurgo (1).png" alt="logo de la pàgina, una furgo california VW amb muntanyes de fons">
+    </div>    
     <p><span style="color: white;">Aquí estic, intentant crear la meva primera pàgina web.</span></p>
     <section id="qui-soc">
         <h2>Qui soc?</h2>
