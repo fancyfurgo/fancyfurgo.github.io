@@ -14,7 +14,7 @@
             color: white;
             font-family: 'Roboto Condensed', sans-serif; 
             font-weight: bold;
-            /* font-family: 'Cabin Regular', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
+            /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
         }
           /* Estils per al títol */
         h1 {
@@ -26,15 +26,20 @@
         }
          h2 {
             color: black;
-            font-family: 'Cabin', sans-serif; 
+            font-family: 'Roboto Condensed', sans-serif; 
             font-size: 20px; /* Mida de la lletra */
          }
          p {
              color: black;
-             font-family: 'Roboto Condensed', sans-serif; 
-             font-size: 20px; /* Mida de la lletra */
+             font-family: 'Cabin', sans-serif; 
+             font-size: 20px; 
          }
-        
+         li {
+             color: black;
+             font-family: 'Cabin', sans-serif; 
+             font-size: 20px;
+         }
+         
         /* Estils per a les seccions com a quadres de text amb colors alternats */
         section {
             padding: 30px;
@@ -59,10 +64,12 @@
          }
          
          #qui-soc img {
-            float: left; /* Aliniar la imatge a l'esquerra */
-            margin-right: 20px; /* Espai de margin a la dreta de la imatge */
-            border-radius: 10px; /* Raconeres arrodonides de la imatge */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombra de la imatge */
+            display: block; /* Fer que la imatge es comporti com un bloc */
+            margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
+            /* float: left;  Aliniar la imatge a l'esquerra */
+            /* margin-right: 20px;  Espai de margin a la dreta de la imatge */
+            /* border-radius: 10px;  Raconeres arrodonides de la imatge */
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */
             width: 200px; /* Amplada de la imatge */ 
             height: auto; /* Alçada automàtica per mantenir la proporció */
         }
@@ -79,11 +86,11 @@
     <!-- Your sections go here -->
     <section id="qui-soc">
         <h2>Qui soc?</h2>
-        <img src="aa Eva skimo.jpg" alt="esquí de muntanya a Andorra, la gran nevada del 9-10 de març">
         <p>Soc l'Eva :) Una tia apassionada per la muntanya i la ciència. Per part de muntanya estic al Centre Excursionista de Catalunya, soc sòcia de fa anys, però fins no fa gaire no m'hi havia implicat molt. Farà cosa d'un any que m'he incorporat al grup de joves, i he descobert un ambient maquíssim. Tant, que m'he motivat a muntar sortides i fer de vocal (ve a ser voluntària). </p>
         <p>També fa poc que he començat a treballar en un àmbit que m'agrada molt, l'educació científica, però no soc profe! Aleshores què soc? Doncs això combinat a organitzar activitats i programes, es converteix en coordinadora de programes científics. A on? A la Fundació Catalunya La Pedrera. I no deixaré el link perquè podeu buscar vosaltres mateixos què és aquesta Fundació.</p>
         <p>La cosa és que vinc d'un camp on la feina anava molt lligada a la passió i, per tant, a la vida personal. Ara això no és tant així, en part perquè ens hem informat i sabem què és el work-life balance, i en part perquè tinc uns horaris fixos i sé quan és hora de treballar i quan d'acabar la jornada. Així que em trobo entre dues aigües, una part de mi li agrada molt el que faig i n'estic apassionada, però l'altra part de mi té clar que en acabar l'horari de feina no puc fer res relacionat amb això. I, per tant, busco i m'endinso a altres coses que m'omplen. I què m'omple? La muntanya, la natura, els llocs aïllats i solitaris, però sense estar mai sola, encara no he provat això de solotrip.</p>
         <p>També tinc molta curiositat i feia temps volia començar el meu blog, però no sabia com, així que avui, divendres vespre (es nota que aquest cap de setmana no marxo d'excursió) m'he motivat a obrir - o intentar- la meva primera pàgina web.</p>
+        <img src="jo.jpg" alt="esquí de muntanya a Andorra, la gran nevada del 9-10 de març">
     </section>
     <section id="per-que-el-blog">
         <h2>Per què aquest blog?</h2>
