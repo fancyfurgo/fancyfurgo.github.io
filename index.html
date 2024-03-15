@@ -38,9 +38,14 @@
              font-family: 'Cabin', sans-serif; 
              font-size: 20px;
          }
-
+         
+        .contenidor-central {
+            display: flex; /* Utilitzem flexbox en el contenidor central */
+            justify-content: center; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            height: 100vh; /* Alçada de la pàgina al 100% de la finestra */
+        }
          .titol-i-logo {
-             display: flex; /* Utilitzem flexbox per alinear contingut */
              align-items: center; /* Centrem verticalment el contingut */
          }
          
@@ -105,10 +110,12 @@
     </style>
 </head>
 <body>
-    <div class="titol-i-logo">
-        <h1>BENVINGUDES EXCURSIONISTES!</h1>
-        <img src="fancyfurgo blau.png" alt="logo de la pàgina, una furgo california VW amb muntanyes de fons">
-    </div>    
+    <div class="contenidor-central">
+        <div class="titol-i-logo">
+            <h1>BENVINGUDES EXCURSIONISTES!</h1>
+            <img src="fancyfurgo blau.png" alt="logo de la pàgina, una furgo california VW amb muntanyes de fons">
+        </div> 
+    </div>
     <p><span style="color: white;">Aquí estic, intentant crear la meva primera pàgina web.</span></p>
     <section id="qui-soc">
         <h2>Qui soc?</h2>
