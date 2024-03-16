@@ -39,10 +39,11 @@ li {
 }
 footer {
           height: 100px;
-          padding: 10px;
+          padding: 50px;
+          marging: 50px
           font-size: 30px; 
           text-align: center;
-          margin-top: 10px;
+          /*margin-top: 10px;*/
 }        
 
 .logos {
@@ -59,8 +60,8 @@ footer {
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-          margin-right: 50px; 
-          padding-right: 50px;
+          margin: 50px; 
+          padding: 50px;
 } 
 
 /* Estils per a les seccions com a quadres de text amb colors alternats */
