@@ -47,15 +47,7 @@ footer {
 .contenidor-logos {
     display: flex; /* Per assegurar-se que les imatges estiguin al costat l'una de l'altra */
 }
-.imatge {
-          margin-right: 20px; /* Espai de 20 píxels a la dreta de la imatge */
-          padding-right: 20px; /* Espai de 20 píxels a la dreta de la imatge */
-          width: 300px; /* Amplada de la imatge */
-          height: 300px; /* Alçada de la imatge */
-          object-fit: cover; /* Manté la proporció de la imatge */
-          border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-          margin-right: 50px;
-}
+
 .logos {
           /* display: flex;  Utilitzem flexbox en el contenidor central */
           justify-content: center; /* Centrem horitzontalment el contingut */
@@ -65,13 +57,14 @@ footer {
           /* margin-right: 20px;  */
 }
          
-/* .logos img { */
-          /*width: 300px;  Amplada de la imatge */
-          /*height: 300px;  Alçada de la imatge */
-          /*object-fit: cover;  Manté la proporció de la imatge */
-          /*border-radius: 50%;  Fa que la imatge sigui rodona (opcional) */
-          /* margin-right: 50px; */
-/* } */
+.logos img { 
+          width: 300px; /* Amplada de la imatge */
+          height: 300px; /* Alçada de la imatge */
+          object-fit: cover; /* Manté la proporció de la imatge */
+          border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+          margin-right: 50px; 
+          padding-right: 20px;
+} 
 
 /* Estils per a les seccions com a quadres de text amb colors alternats */
 section {
