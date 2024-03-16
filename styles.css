@@ -60,7 +60,7 @@ footer {
           object-fit: cover; /* Manté la proporció de la imatge */
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
           margin-right: 50px; 
-          padding-right: 20px;
+          padding-right: 50px;
 } 
 
 /* Estils per a les seccions com a quadres de text amb colors alternats */
