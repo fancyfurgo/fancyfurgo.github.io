@@ -39,15 +39,16 @@ li {
 }
 footer {
           height: 100px;
-          padding: 50px;
-          marging: 50px
+          /*padding: 50px;
+          marging: 50px; */
           font-size: 30px; 
+          font-family: 'Cabin', sans-serif; 
           text-align: center;
           /*margin-top: 10px;*/
 }        
 .contenidor-inicial {
              display: flex;
-              flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+           /*flex-wrap: wrap;  Permet que les imatges es distribueixin en múltiples línies */
 } 
 .contenidor-inicial {
           display: flex;  /* Utilitzem flexbox en el contenidor central */
@@ -63,7 +64,8 @@ footer {
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-          margin: 50px; 
+          margin-right: 30px; 
+          margin-bottom: 10px;
           padding: 50px;
 } 
 
