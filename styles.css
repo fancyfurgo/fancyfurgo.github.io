@@ -44,12 +44,9 @@ footer {
           text-align: center;
           margin-top: 10px;
 }        
-.contenidor-logos {
-    display: flex; /* Per assegurar-se que les imatges estiguin al costat l'una de l'altra */
-}
 
 .logos {
-          /* display: flex;  Utilitzem flexbox en el contenidor central */
+          display: flex;  /* Utilitzem flexbox en el contenidor central */
           justify-content: center; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
           /* height: 100vh;   Alçada de la pàgina al 100% de la finestra */
