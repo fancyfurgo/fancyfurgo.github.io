@@ -4,89 +4,88 @@
 /* Data de creació: 15 de març de 2024 */
 
 
-          /* Estils per a la pàgina en general */
-        body {
-            background-color: #245777; /* Blau claret, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
-            color: white;
-            font-family: 'Roboto Condensed', sans-serif; 
-            /* margin: 40px; */
-            /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
-        }
+/* Estils per a la pàgina en general */
+body {
+          background-color: #245777; /* Blau claret, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
+          color: white;
+          font-family: 'Roboto Condensed', sans-serif; 
+          /* margin: 40px; */
+          /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
+}
           
-        h1 {
-            color: white;
-            text-align: center; /* Centrat */
-            font-weight: bold; /* Negreta */
-            font-family: 'Roboto Condensed', sans-serif; 
-            font-size: 70px; /* Mida de la lletra */
-        }
-         h2 {
-            color: black;
-            font-family: 'Roboto Condensed', sans-serif; 
-            font-size: 30px; /* Mida de la lletra */
-         }
-         p {
-             color: black;
-             font-family: 'Cabin', sans-serif; 
-             font-size: 20px; 
-             text-align: justify;
-         }
-         li {
-             color: black;
-             font-family: 'Cabin', sans-serif; 
-             font-size: 20px;
-             text-align: justify;
-         }
-          footer {
-                    height: 100px;
-                    padding: 10px;
-                    font-size: 30px; 
-                    text-align: center;
-                    margin-top: 10px;
-          }        
+h1 {
+          color: white;
+          text-align: center; /* Centrat */
+          font-weight: bold; /* Negreta */
+          font-family: 'Roboto Condensed', sans-serif; 
+          font-size: 70px; /* Mida de la lletra */
+}
+h2 {
+          color: black;
+          font-family: 'Roboto Condensed', sans-serif; 
+          font-size: 30px; /* Mida de la lletra */
+}
+p {
+          color: black;
+          font-family: 'Cabin', sans-serif; 
+          font-size: 20px; 
+          text-align: justify;
+}
+li {
+          color: black;
+          font-family: 'Cabin', sans-serif; 
+          font-size: 20px;
+          text-align: justify;
+}
+footer {
+          height: 100px;
+          padding: 10px;
+          font-size: 30px; 
+          text-align: center;
+          margin-top: 10px;
+}        
 
-         .logos {
+.logos {
           display: flex; /* Utilitzem flexbox en el contenidor central */
           justify-content: center; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
           height: 100vh;  /* Alçada de la pàgina al 100% de la finestra */
           float: center;
           margin-right: 20px;
-         }
+}
          
-         .logos img {
-             width: 300px; /* Amplada de la imatge */
-             height: 300px; /* Alçada de la imatge */
-             object-fit: cover; /* Manté la proporció de la imatge */
-             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-             margin-right: 20px;
-         }
+.logos img {
+          width: 300px; /* Amplada de la imatge */
+          height: 300px; /* Alçada de la imatge */
+          object-fit: cover; /* Manté la proporció de la imatge */
+          border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+          margin-right: 20px;
+}
 
+/* Estils per a les seccions com a quadres de text amb colors alternats */
+section {
+          padding: 30px;
+          margin: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estil per a seccions imparells (color alternat) */
+section:nth-child(odd) {
+          background-color: #e5f2ff; /* Color alternat */
+}
+
+/* Estil per a seccions parells (color alternat) */
+section:nth-child(even) {
+          background-color: #cae6ff; /* Color alternat diferent */
+}
+
+#qui-soc {
+          padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
+          overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
+}
          
-        /* Estils per a les seccions com a quadres de text amb colors alternats */
-        section {
-            padding: 30px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estil per a seccions imparells (color alternat) */
-        section:nth-child(odd) {
-            background-color: #e5f2ff; /* Color alternat */
-        }
-
-        /* Estil per a seccions parells (color alternat) */
-        section:nth-child(even) {
-            background-color: #cae6ff; /* Color alternat diferent */
-        }
-
-         #qui-soc {
-             padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
-             overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
-         }
-         
-         #qui-soc img {
+#qui-soc img {
             display: block; /* Fer que la imatge es comporti com un bloc */
             width: 100%; /* Amplada de la imatge al 100% del seu contenidor */ 
             margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
@@ -95,26 +94,26 @@
             /* border-radius: 10px;  Raconeres arrodonides de la imatge */
             /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */ 
             /* height: auto;  Alçada automàtica per mantenir la proporció */
-        }
+}
 
-         /* Estils per als enllaços */
-         a {
+/* Estils per als enllaços */
+a {
         color: inherit; /* Hereta el color del text del seu element pare */
         text-decoration: none; /* Elimina el subratllat dels enllaços */
         transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
-        }
+}
 
-        /* Estil quan es passa el cursor sobre l'enllaç */
-        a:hover {
+/* Estil quan es passa el cursor sobre l'enllaç */
+a:hover {
         color: #ff6600; /* Canvia el color quan es passa el cursor */
-        }
+}
 
-         #inici-projecte {
+#inici-projecte {
              padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
              overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
-         }
+}
          
-         #inici-projecte img {
+#inici-projecte img {
             display: block; /* Fer que la imatge es comporti com un bloc */
             width: 200px; /* Amplada de la imatge al 100% del seu contenidor */ 
             height: auto; /* Alçada automàtica per mantenir la proporció */
@@ -123,6 +122,21 @@
             border-radius: 50px;  /* Raconeres arrodonides de la imatge */
             object-fit: cover; /* Manté la proporció de la imatge */
             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-        }
+}
 
+#scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    display: none; /* Oculta l'icona inicialment */
+}
+
+#scroll-to-top-btn:hover {
+    background-color: #555;
+}
 
