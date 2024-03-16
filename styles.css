@@ -44,7 +44,7 @@ footer {
           font-size: 30px; 
           font-family: 'Cabin', sans-serif; 
           text-align: center;
-          /*margin-top: 10px;*/
+          margin-top: 10px;
 }        
 .contenidor-inicial {
              display: flex;
