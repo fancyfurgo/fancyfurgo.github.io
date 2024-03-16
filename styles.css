@@ -49,7 +49,7 @@ footer {
 .contenidor-inicial {
           display: flex;
           flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
-          gap: 5px; /* Indica la separació mínima abans de saltar de línia */
+          gap: 5px; /* Espai entre les imatges */
           justify-content: space-between; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
           /* height: 100vh;   Alçada de la pàgina al 100% de la finestra */
@@ -64,7 +64,7 @@ footer {
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
           margin-right: 30px; 
           margin-bottom: 10px;
-          padding: 50px;
+          min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
 } 
 
 /* Estils per a les seccions com a quadres de text amb colors alternats */
