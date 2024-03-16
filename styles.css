@@ -45,8 +45,11 @@ footer {
           text-align: center;
           /*margin-top: 10px;*/
 }        
-
-.logos {
+.contenidor-inicial {
+             display: flex;
+              flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+} 
+.contenidor-inicial {
           display: flex;  /* Utilitzem flexbox en el contenidor central */
           justify-content: space-between; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
@@ -55,7 +58,7 @@ footer {
           /* margin-right: 20px;  */
 }
          
-.logos img { 
+.contenidor-inicial img { 
           width: 300px; /* Amplada de la imatge */
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
