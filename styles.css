@@ -47,7 +47,7 @@ footer {
 
 .logos {
           display: flex;  /* Utilitzem flexbox en el contenidor central */
-          justify-content: center; /* Centrem horitzontalment el contingut */
+          justify-content: space-between; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
           /* height: 100vh;   Alçada de la pàgina al 100% de la finestra */
           float: center;
