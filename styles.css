@@ -39,30 +39,26 @@
          }
           footer {
                     height: 100px;
-                    padding: 20px;
-                    font-size: 20px; 
-                    text-align: center;
-                    margin-top: 20px;
+                    padding: 10px;
+                    font-size: 30px; 
+                    /* text-align: center; */
+                    margin-top: 10px;
           }
                     
-                    
-         
-        .contenidor-central {
-            display: flex; /* Utilitzem flexbox en el contenidor central */
-            justify-content: center; /* Centrem horitzontalment el contingut */
-            align-items: center; /* Centrem verticalment el contingut */
-            height: 100vh;  /* Alçada de la pàgina al 100% de la finestra */
-        }
-         .titol-i-logos {
-             align-items: center; /* Centrem verticalment el contingut */
-             float: center;
+
+         .logos {
+          display: flex; /* Utilitzem flexbox en el contenidor central */
+          justify-content: center; /* Centrem horitzontalment el contingut */
+          align-items: center; /* Centrem verticalment el contingut */
+          height: 50vh;  /* Alçada de la pàgina al 100% de la finestra */
+          float: center;
          }
          
-         .titol-i-logos h1 {
+         .logos h1 {
              margin-right: 20px; /* Espai entre el títol i la imatge */
          }
          
-         .titol-i-logos img {
+         .logos img {
              width: 300px; /* Amplada de la imatge */
              height: 300px; /* Alçada de la imatge */
              object-fit: cover; /* Manté la proporció de la imatge */
