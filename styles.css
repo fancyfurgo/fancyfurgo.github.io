@@ -51,6 +51,7 @@
           align-items: center; /* Centrem verticalment el contingut */
           height: 100vh;  /* Alçada de la pàgina al 100% de la finestra */
           float: center;
+          margin-right: 20px;
          }
          
          .logos img {
