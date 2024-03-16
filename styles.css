@@ -49,7 +49,7 @@ footer {
           display: flex; /* Utilitzem flexbox en el contenidor central */
           justify-content: center; /* Centrem horitzontalment el contingut */
           align-items: center; /* Centrem verticalment el contingut */
-          height: 100vh;  /* Alçada de la pàgina al 100% de la finestra */
+          /* height: 100vh;   Alçada de la pàgina al 100% de la finestra */
           float: center;
           margin-right: 20px;
 }
@@ -59,7 +59,7 @@ footer {
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-          margin-right: 20px;
+          margin-right: 50px;
 }
 
 /* Estils per a les seccions com a quadres de text amb colors alternats */
