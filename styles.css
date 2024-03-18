@@ -124,7 +124,7 @@ a:hover {
             width: 200px; /* Amplada de la imatge al 100% del seu contenidor */ 
             height: auto; /* Alçada automàtica per mantenir la proporció */
             float: left;  /* Aliniar la imatge a l'esquerra */
-            margin-right: 20px; /* Espai de margin a la dreta de la imatge */
+            margin: 20px; /* Espai de margin a tots els costats de la imatge */
             border-radius: 50px;  /* Raconeres arrodonides de la imatge */
             object-fit: cover; /* Manté la proporció de la imatge */
             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
