@@ -63,7 +63,8 @@ footer {
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
           border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
-          margin-right: 30px; 
+          margin-right: 50px;
+          margin-left: 50px;
           margin-bottom: 10px;
           min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
 } 
