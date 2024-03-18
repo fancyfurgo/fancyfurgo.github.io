@@ -32,11 +32,23 @@
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px; 
+             text-align: justify;
          }
          li {
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px;
+             text-align: justify;
+         }
+         footer {
+             height: 100px;
+             /*padding: 50px;
+             marging: 50px; */
+             font-size: 30px; 
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             text-align: center;
+             margin-top: 5px;
          }
          
         /* Estils per a les seccions com a quadres de text amb colors alternats */
@@ -57,21 +69,25 @@
             background-color: #cae6ff; /* Color alternat diferent */
         }
 
-         #qui-soc {
-             padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
-             overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
-         }
-         
-         #qui-soc img {
-            display: block; /* Fer que la imatge es comporti com un bloc */
-            width: 100%; /* Amplada de la imatge al 100% del seu contenidor */ 
-            margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
-            /* float: left;  Aliniar la imatge a l'esquerra */
-            /* margin-right: 20px;  Espai de margin a la dreta de la imatge */
-            /* border-radius: 10px;  Raconeres arrodonides de la imatge */
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */ 
-            /* height: auto;  Alçada automàtica per mantenir la proporció */
+        .contenidor-skimo {
+            display: flex;
+            flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+            gap: 5px; /* Espai entre les imatges */
+            justify-content: space-between; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            float: center;
+            /* margin-right: 20px;  */
         }
+         
+         .contenidor-skimo img { 
+          width: 300px; /* Amplada de la imatge */
+          height: 300px; /* Alçada de la imatge */
+          object-fit: cover; /* Manté la proporció de la imatge */
+          border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+          margin-right: 50px;
+          margin-bottom: 10px;
+          min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
+         } 
 
     </style>
 </head>
@@ -83,13 +99,21 @@
     <p>La meva introducció al món de l'esquí de muntanya ve del meu pare. Jo de petitona veia unes tires llargues penjades de la dutxa així peludetes els diumenges d'hivern, preguntava i em deien que eren de foca. Jo no entenia què volia dir, ni què implicava. Però tenia curiositat per fer-ho quan fos gran. El 2019 vaig fer la meva primera sortida de skimo amb mon pare i em va semblar una tortura. Com que només baixarem un cop? Per què pesa tant tot això? Per què em fa mal el genoll? En vaig fer un parell aquell any, però no va quallar. No va ser fins al 2023 què vaig tornar-me a posar esquís de muntanya, aquest cop amb els joves del CEC. Em continuava cansant molt, però tenia una companyia que m'animava molt i em donava conversa. Les baixades eren divertides i no em feien tant mal les cames (tot i caure diverses vegades). Tenia clar que era un esport que m'havia d'agradar, és la combinació de fer muntanya i pujar un cim amb esquiar. I esquiar m'encanta. Així que vaig decidir que de cara a la següent temporada em compraria el material, no volia anar-me deixant 50€ de lloguer cada dia d'activitat, sinó, no en faria gaire sovint. L'hivern del 2023 cap al 2024, coincidint amb el primer sou digne vaig decidir que si m'havia de comprar el material, havia de ser ara. I aquí estic, després d'haver trobat ofertes i rebaixes, amb una equipació ben xulona de skimo. I més forta que l'any passat per poder baixar sense que em facin figa les cames.</p>
     <p>Aquí van les meves sortides de skimo:</p>
     </section>
+    <div class="contenidor-skimo">
+        <a href=#montgarri>
+            <img src="montgarri.jpg" alt="dibuix montgarri">
+            <footer>Montgarri</footer>
+        </a>
+    </div>
     <section id="montgarri">
-        <h2>Montgarri. Pic dels Bandolers des de Pla de Beret</h2>
-        <p>Època: hivernal, neva durant la sortida.</p>
-        <p>Dificultat: iniciació al skimo.</p>
-        <p>Tipus de terreny: simple gran part del terreny, alguna zona de terreny exigent.</p>
-        <p>Zona: Vall d’Aran. Aparquem al pk de Pla de Beret i dormim a Montgarri.</p>
-        <p>Track de referència: <a href="https://www.wikiloc.com/back-country-skiing-trails/tuc-de-bandolers-2-323-mts-val-daran-11865020"> redirecció a wikiloc</a> </p>
+        <h2>Montgarri. Pic dels Bandolers des de Pla de Beret.</h2>
+        <ul>
+            <li>Època: hivernal, neva durant la sortida.</li>
+            <li>Dificultat: iniciació al skimo.</li>
+            <li>Tipus de terreny: simple gran part del terreny, alguna zona de terreny exigent.</li>
+            <li>Zona: Vall d’Aran. Aparquem al pk de Pla de Beret i dormim a Montgarri.</li>
+            <li>Track de referència: <a href="https://www.wikiloc.com/back-country-skiing-trails/tuc-de-bandolers-2-323-mts-val-daran-11865020"> redirecció a wikiloc</a> </li>  
+        </ul>
         <p>24 de febrer 2024. Vam pringar bastant, però ens vam adonar que estem molt fortes! Vam haver de portejar els esquís bastant més tros del que pensàvem. Del cotxe al refugi amb els esquís a l’esquena, i un cop passat el refugi també vam portejar fins a arribar a tenir bona neu. Va ser la primera trobada hivernal de joves de la temporada, i amb el plus que la vaig organitzar jo. Important per a mi, era la primera sortida que feia com a vocal del CEC.</p>
         <p>Un cop posats els esquís va començar a nevar, va ser una sortida ben maca. I la baixada deu ni dó com vam gaudir. Per mi, una de les baixades més disfrutones de skimo mai fetes. </p>
         <p>Va estar nevant tota la nit de dissabte a diumenge, tant que diumenge vam poder sortir esquiant del refu i arribar al cotxe esquiant. De porta a porta amb els esquís, quina passada!</p>
