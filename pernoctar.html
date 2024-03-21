@@ -166,6 +166,8 @@
     </section>
     <img src="icona_scroll.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     <script>
+        // Valors per ajustar la velocitat de moviment de la icona
+        var movimentPerEsglaó = 5; // Canvia aquest valor segons la velocitat desitjada
         // Funció per actualitzar la posició de la icona
         window.onscroll = function() {
             var icona = document.getElementById('iconaScroll');
@@ -173,7 +175,7 @@
             // Ajusta la posició vertical de la icona segons l'escroll
             icona.style.top = scrollPosicio + 'px';
             // Ajusta la posició horitzontal de la icona a la dreta
-            icona.style.right = '20px'; // Pots ajustar la distància desitjada a la dreta
+            icona.style.right = '15px'; // Pots ajustar la distància desitjada a la dreta
         };
         // Funció per fer scroll cap amunt
         function scrollToTop() {
