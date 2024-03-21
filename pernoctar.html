@@ -108,7 +108,7 @@
              bottom: 20px;
              right: 20px;
              padding: 5px;
-             width: 30px;
+             width: 40px;
              height: auto;
              transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
@@ -181,13 +181,9 @@
             var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
             if (scrollPosicio > 100) { // Pots ajustar aquest valor segons la posició que vulguis
-                icona.style.bottom = '40px'; // Nou valor de posició
-                icona.style.width = '20px'; // Nova amplada de la icona
-                icona.style.height = '20px'; // Nova alçada de la icona
+                icona.style.bottom = '60px'; // Nou valor de posició
             } else {
                 icona.style.bottom = '20px'; // Valor per defecte
-                icona.style.width = '30px'; // Amplada per defecte
-                icona.style.height = '30px'; // Alçada per defecte
             }
         };
     </script>
