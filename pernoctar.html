@@ -103,21 +103,14 @@
          } 
 
          /* Estils per al botó de scroll-up */
-         #scroll-to-top-btn {
+         .icona-scroll {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            transition: bottom 0.3s ease; /* Transició suau del moviment */
             cursor: pointer;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 50%;
-            display: none; /* Oculta l'icona inicialment */
         }
-         #scroll-to-top-btn:hover {
-             background-color: #555;
-         }
-
+        
     </style>
 </head>
 <body>
@@ -169,10 +162,28 @@
         <h2>Alta Garrotxa</h2>
         <p>Una nit de terror.</p>
     </section>
-    <div id="scrollUpBtn">
-        <i class="fas fa-arrow-up"></i> <!-- Font Awesome icon per la fletxa cap amunt -->
-    </div>
-     
-    <script src="script.js"></script>
+    <img src="icona_scroll.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    <script>
+        // Funció per fer scroll cap amunt
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+            var icona = document.getElementById('iconaScroll');
+            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            if (scrollPosicio > 100) { // Pots ajustar aquest valor segons la posició que vulguis
+                icona.style.bottom = '60px'; // Nou valor de posició
+            } else {
+                icona.style.bottom = '20px'; // Valor per defecte
+            }
+        };
+    </script>
+    
 </body>
 </html>
