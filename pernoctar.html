@@ -166,6 +166,15 @@
     </section>
     <img src="icona_scroll.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     <script>
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+            var icona = document.getElementById('iconaScroll');
+            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            // Ajusta la posició vertical de la icona segons l'escroll
+            icona.style.top = scrollPosicio + 'px';
+            // Ajusta la posició horitzontal de la icona a la dreta
+            icona.style.right = '20px'; // Pots ajustar la distància desitjada a la dreta
+        };
         // Funció per fer scroll cap amunt
         function scrollToTop() {
             window.scrollTo({
@@ -173,16 +182,10 @@
                 behavior: 'smooth'
             });
         }
-
-        // Funció per actualitzar la posició de la icona
-        window.onscroll = function() {
-            var icona = document.getElementById('iconaScroll');
-            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            // Ajusta la posició vertical de la icona segons l'escroll
-            icona.style.top = (scrollPosicio + window.innerHeight - icona.clientHeight) + 'px';
-            // Ajusta la posició horitzontal de la icona a la dreta
-            icona.style.right = '20px'; // Pots ajustar la distància desitjada a la dreta
-        };
+        // Seleccione l'element de la icona de scroll cap amunt
+        var iconaScroll = document.getElementById('iconaScroll');
+        // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
+        iconaScroll.addEventListener('click', scrollToTop);
     </script>
     
 </body>
