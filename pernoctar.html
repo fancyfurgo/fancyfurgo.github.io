@@ -102,6 +102,23 @@
              min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
          } 
 
+         /* Estils per al botó de scroll-up */
+        #scrollUpBtn {
+            display: none; /* Amaga el botó per defecte */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 24px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -153,7 +170,7 @@
         <h2>Alta Garrotxa</h2>
         <p>Una nit de terror.</p>
     </section>
-    <div id="scroll-to-top-btn">
+    <div id="scrollUpBtn">
         <i class="fas fa-arrow-up"></i> <!-- Font Awesome icon per la fletxa cap amunt -->
     </div>
      
