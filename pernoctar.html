@@ -105,10 +105,9 @@
          /* Estils per al botó de scroll-up */
          .icona-scroll {
              position: fixed;
-             bottom: 20px;
-             right: 20px;
-             padding: 5px;
-             width: 40px;
+             top: 20px; /* Distància desitjada des del top */
+             right: 20px; /* Distància desitjada a la dreta */
+             width: 50px;
              height: auto;
              transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
@@ -179,7 +178,11 @@
         window.onscroll = function() {
             var icona = document.getElementById('iconaScroll');
             var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
+            // Ajusta la posició vertical de la icona segons l'escroll
+            icona.style.top = (scrollPosicio + window.innerHeight - icona.clientHeight) + 'px';
+            // Ajusta la posició horitzontal de la icona a la dreta
+            icona.style.right = '20px'; // Pots ajustar la distància desitjada a la dreta
+            
             if (scrollPosicio > 100) { // Pots ajustar aquest valor segons la posició que vulguis
                 icona.style.bottom = '60px'; // Nou valor de posició
             } else {
