@@ -109,7 +109,6 @@
              right: 20px; /* Distància desitjada a la dreta */
              width: 50px;
              height: auto;
-             transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
         }
         
@@ -182,12 +181,6 @@
             icona.style.top = (scrollPosicio + window.innerHeight - icona.clientHeight) + 'px';
             // Ajusta la posició horitzontal de la icona a la dreta
             icona.style.right = '20px'; // Pots ajustar la distància desitjada a la dreta
-            
-            if (scrollPosicio > 100) { // Pots ajustar aquest valor segons la posició que vulguis
-                icona.style.bottom = '60px'; // Nou valor de posició
-            } else {
-                icona.style.bottom = '20px'; // Valor per defecte
-            }
         };
     </script>
     
