@@ -194,7 +194,7 @@
             // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
             icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
             // Ajusta la posició horitzontal de la icona a la dreta
-            icona.style.right = '15px'; // Pots ajustar la distància desitjada a la dreta
+            icona.style.right = '2px'; // Pots ajustar la distància desitjada a la dreta
         };
         // Funció per fer scroll cap amunt
         function scrollToTop() {
@@ -203,7 +203,7 @@
                 behavior: 'smooth'
             });
         }
-        // Seleccione l'element de la icona de scroll cap amunt
+        // Selecciona l'element de la icona de scroll cap amunt
         var iconaScroll = document.getElementById('iconaScroll');
         // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
         iconaScroll.addEventListener('click', scrollToTop);
