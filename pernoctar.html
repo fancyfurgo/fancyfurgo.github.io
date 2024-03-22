@@ -13,7 +13,6 @@
             background-color: #245777; /* Blau claret, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
             color: white;
             font-family: 'Roboto Condensed', sans-serif; 
-            position: relative;
             /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
         }
           /* Estils per al títol */
@@ -107,21 +106,24 @@
          .icona-scroll {
              position: fixed;
              top: 20px; /* Distància desitjada des del top */
-             right: 10px; /* Distància desitjada a la dreta */
+             right: 0; /* Distància desitjada a la dreta */
              width: 60px;
              height: auto;
              transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
+             z-indez: 2;
         }
 
          /* Afegir la corda del rapel, per la broma del scroll */
          .linea-rosa {
-             position: absolute; /* La línia es posiciona respecte al cos de la pàgina */
+             position: fixed; /* La línia es posiciona respecte al cos de la pàgina */
              top: 0; /* Posició a la part superior de la pàgina */
+             height: 100%;
              right: 10px; /* Distància del marge lateral dret */
              width: 2px; /* Amplada de la línia */
-             height: 100vh; /* Alçada que ocupa tota l'alçada de la pàgina */
+             /* height: 100vh;  Alçada que ocupa tota l'alçada de la pàgina */
              background-color: pink; /* Color rosa de la línia */
+             z-index: 1;
          }
         
     </style>
@@ -175,8 +177,9 @@
         <h2>Alta Garrotxa</h2>
         <p>Una nit de terror.</p>
     </section>
-    <img src="scroll rapel.png.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     <div class="linea-rosa"></div>
+    <img src="scroll rapel.png.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    
     <script>
         // Valors per ajustar la velocitat de moviment de la icona
         var pantallaTotal = document.documentElement.scrollHeight; // Alçada total de la pàgina en píxels
