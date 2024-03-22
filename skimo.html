@@ -102,6 +102,22 @@
              min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
          } 
 
+         /* Botó per fer scroll-up */
+         #scroll-to-top-btn {
+             position: fixed;
+             bottom: 20px;
+             right: 20px;
+             cursor: pointer;
+             background-color: #333;
+             color: #fff;
+             padding: 10px;
+             border-radius: 50%;
+             display: none; /* Oculta l'icona inicialment */
+         }
+         #scroll-to-top-btn:hover {
+             background-color: #555;
+         }
+
     </style>
 </head>
 <body>
@@ -169,5 +185,10 @@
         <p>Nosaltres vam fer tota la pujada pel circuit i després vam baixar fins al encreuament amb les pistes de esquí alpí. Allà vam descansar i vam tornar a pujar per repetir la baixada. I mira que teníem les cames rebentades, però havíem de repetir aquella baixada entre arbres i arbustos que tant ens havia fet pujar l’adrenalina. Quins crits a cada gir, quina emoció! La baixada des del encreuament amb les pistes d’alpí fins al cotxe va ser per una blava facileta i amb poca gent, però ja necessitàvem aquest “descans”, va ser una baixada a full speed acompanyada de crits d’eufòria. </p>
         <p>Quin grupet més maco, i quines ganes de repetir amb ells i elles. </p>
     </section>
+    <div id="scroll-to-top-btn">
+        <i class="fas fa-arrow-up"></i> <!-- Font Awesome icon per la fletxa cap amunt -->
+    </div>
+     
+    <script src="script.js"></script>
 </body>
 </html>
