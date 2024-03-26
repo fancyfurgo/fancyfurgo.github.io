@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barrancs secs</title>
+    <title>Barrancs Secs</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&display=swap">
 
@@ -32,11 +32,23 @@
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px; 
+             text-align: justify;
          }
          li {
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px;
+             text-align: justify;
+         }
+         footer {
+             height: 100px;
+             /*padding: 50px;
+             marging: 50px; */
+             font-size: 30px; 
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             text-align: center;
+             margin-top: 5px;
          }
          
         /* Estils per a les seccions com a quadres de text amb colors alternats */
@@ -56,32 +68,140 @@
         section:nth-child(even) {
             background-color: #cae6ff; /* Color alternat diferent */
         }
-
-         #qui-soc {
-             padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
-             overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
-         }
-         
-         #qui-soc img {
-            display: block; /* Fer que la imatge es comporti com un bloc */
-            width: 100%; /* Amplada de la imatge al 100% del seu contenidor */ 
-            margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
-            /* float: left;  Aliniar la imatge a l'esquerra */
-            /* margin-right: 20px;  Espai de margin a la dreta de la imatge */
-            /* border-radius: 10px;  Raconeres arrodonides de la imatge */
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */ 
-            /* height: auto;  Alçada automàtica per mantenir la proporció */
+         /* Estils per als enllaços */
+        a {
+            color: inherit; /* Hereta el color del text del seu element pare */
+            text-decoration: none; /* Elimina el subratllat dels enllaços */
+            transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
         }
 
+        /* Estil quan es passa el cursor sobre l'enllaç */
+        a:hover {
+        color: #ff6600; /* Canvia el color quan es passa el cursor */
+        }
+
+        .contenidor-barrancs {
+            display: flex;
+            flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+            gap: 5px; /* Espai entre les imatges */
+            justify-content: space-between; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            float: center;
+            margin-right: 20px; 
+            margin-left: 20px;
+        }
+         
+         .contenidor-barrancs img { 
+             width: 300px; /* Amplada de la imatge */
+             height: 300px; /* Alçada de la imatge */
+             object-fit: cover; /* Manté la proporció de la imatge */
+             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+             margin-right: 50px;
+             margin-left: 50px;
+             margin-bottom: 10px;
+             min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
+         } 
+
+         /* Estils per al botó de scroll-up */
+         .icona-scroll {
+             position: fixed;
+             top: 20px; /* Distància desitjada des del top */
+             right: 0; /* Distància desitjada a la dreta */
+             width: 60px;
+             height: auto;
+             transition: bottom 0.3s ease; /* Transició suau del moviment */
+             cursor: pointer;
+             z-indez: 2;
+        }
+
+         /* Afegir la corda del rapel, per la broma del scroll */
+         .linea-rosa {
+             position: fixed; /* La línia es posiciona respecte al cos de la pàgina */
+             top: 0; /* Posició a la part superior de la pàgina */
+             height: 100%;
+             right: 10px; /* Distància del marge lateral dret */
+             width: 2px; /* Amplada de la línia */
+             /* height: 100vh;  Alçada que ocupa tota l'alçada de la pàgina */
+             background-color: #fc84bb; /* Color rosa de la línia */
+             z-index: 1;
+         }
+        
     </style>
 </head>
 <body>
-    <h1>Noruega amb la fancyfurgo</h1>
-    <p>Aquí estic, intentant crear el meu primer enllaç a la pàgina principal</p>
-    <section id="road-trips">
-        <h2>Noruega</h2>
-        <p>Aquí escriuré el meu 1r blog</p>
-
+    <h1>Barrancs Secs</h1>
+    <div class="contenidor-barrancs">
+        <a href=#montsec>
+            <img src="vinyemal cercle.png" alt="foto de grup des del refugi d'Oulettes ">
+            <footer>Montsec</footer>
+        </a>
+        <a href=#guara>
+            <img src="perdido cercle.png" alt="dibuix del Perdido">
+            <footer>Guara</footer>
+        </a>
+        <a href=#montserrat>
+            <img src="balandrau cercle.png" alt="dibuix del Balandrau">
+            <footer>Canals a Montserrat</footer>
+        </a>
+        <a href=#ports>
+            <img src="vivac temporal cercle.png" alt="dibuix del vivac">
+            <footer>Ports</footer>
+        </a>
+        <a href=#castanyada>
+            <img src="castanyada cercle.png" alt="dibuix de la castanyada">
+            <footer>Dormint a una esglèsia</footer>
+        </a>
+    </div>
+    <section id="intro">
+        <h2>M'ho estic passant molt bé!!!</h2>
     </section>
+    <section id="montsec">
+        <h2>El meu primer ràpel!!</h2>
+        <p>Descobrint una passió</p>
+    </section>
+    <section id="guara">
+        <h2>Guara</h2>
+        <p>El paradís dels barrancs! Stage de barranquisme semisec.</p>
+    </section>
+    <section id="montserrat">
+        <h2>Canals a Montserrat</h2>
+        <p>Començo a aprendre.</p>
+    </section>
+    <section id="ports">
+        <h2>Ports</h2>
+        <p>Em nombren caballera dels barrancs.</p>
+    </section>
+    <div class="linea-rosa"></div>
+    <img src="scroll rapel.png.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    
+    <script>
+        // Valors per ajustar la velocitat de moviment de la icona
+        var pantallaTotal = document.documentElement.scrollHeight; // Alçada total de la pàgina en píxels
+        var finestraVisible = window.innerHeight; // Alçada de la finestra visible en píxels
+        var ratioMoviment = finestraVisible / pantallaTotal; // Ratio de moviment (0 a 1, quan més petit, més ràpid)
+     
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+            var icona = document.getElementById('iconaScroll');
+            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            
+            // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+            icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+            // Ajusta la posició horitzontal de la icona a la dreta
+            icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+        };
+        // Funció per fer scroll cap amunt
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        // Selecciona l'element de la icona de scroll cap amunt
+        var iconaScroll = document.getElementById('iconaScroll');
+        // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
+        iconaScroll.addEventListener('click', scrollToTop);
+    </script>
+    
 </body>
 </html>
