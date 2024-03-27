@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sortides matinals</title>
+    <title>Sotides matinals</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&display=swap">
 
      <style>
          /* Estils per a la pàgina en general */
         body {
-            background-color: #245777; /* Blau claret, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
+            background-color: #245777; /* Blau, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
             color: white;
             font-family: 'Roboto Condensed', sans-serif; 
             /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
@@ -32,11 +32,23 @@
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px; 
+             text-align: justify;
          }
          li {
              color: black;
              font-family: 'Cabin', sans-serif; 
              font-size: 20px;
+             text-align: justify;
+         }
+         footer {
+             height: 100px;
+             /*padding: 50px;
+             marging: 50px; */
+             font-size: 30px; 
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             text-align: center;
+             margin-top: 5px;
          }
          
         /* Estils per a les seccions com a quadres de text amb colors alternats */
@@ -52,7 +64,23 @@
             background-color: #e5f2ff; /* Color alternat */
         }
 
-         .contenidor-matinals {
+        /* Estil per a seccions parells (color alternat) */
+        section:nth-child(even) {
+            background-color: #cae6ff; /* Color alternat diferent */
+        }
+         /* Estils per als enllaços */
+        a {
+            color: inherit; /* un color diferent perquè es vegi que hi ha un link. inherit: hereta el color del text del seu element pare */
+            text-decoration: none; /* Elimina el subratllat dels enllaços */
+            transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
+        }
+
+        /* Estil quan es passa el cursor sobre l'enllaç */
+        a:hover {
+        color: #ff6600; /* Canvia el color quan es passa el cursor */
+        }
+
+        .contenidor-matinals {
             display: flex;
             flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
             gap: 5px; /* Espai entre les imatges */
@@ -74,35 +102,38 @@
              min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
          } 
 
-        /* Estil per a seccions parells (color alternat) */
-        section:nth-child(even) {
-            background-color: #cae6ff; /* Color alternat diferent */
-        }
-
-        /* Estils per al botó de scroll-up */
+         /* Estils per al botó de scroll-up */
          .icona-scroll {
              position: fixed;
-             top: 20px; /* Distància desitjada des del top */
-             right: 0; /* Distància desitjada a la dreta */
-             width: 60px;
+             margin: 0; 
+             width: 40px;
              height: auto;
              transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
+             z-indez: 1;
         }
+        
     </style>
 </head>
 <body>
     <h1>Sortides matinals</h1>
     <div class="contenidor-matinals">
-        <a href=#montserrat>
-            <img src="matinals cercle.png" alt="foto de les matinals">
-            <footer>Montserrat</footer>
+        <a href=#primera>
+            <img src="matinals cercle.png" alt="grup matinals">
+            <footer>La primera</footer>
         </a>
     </div>
-    <section id="matinals">
-        <h2>Montserrat</h2>
-        <p>He de fer el recopilatori</p>
+    <section id="intro">
+        <p>Bones!</p>
+        <p>Heu fet mai una llista de desitjos? O una llista de coses que us agradaria fer però que encara no heu fet? Això mateix és el que vaig fer fa cosa de mig any. </p>
+        <p>Aquí us deixo les sortides hivernals amb grampons que hem fet:</p>
     </section>
+    <section id="primera">
+        <h2>Canal del cavall Bernat</h2>
+        <p>La meva primera matinal. Aquí vaig conèixer al Guillem!</p>
+    </section>
+   
+    <div class="linea-blanca"></div>
     <img src="scroll matinals.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     
     <script>
@@ -113,13 +144,13 @@
      
         // Funció per actualitzar la posició de la icona
         window.onscroll = function() {
-        var icona = document.getElementById('iconaScroll');
-        var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            var icona = document.getElementById('iconaScroll');
+            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
             
-        // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
-        icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
-        // Ajusta la posició horitzontal de la icona a la dreta
-        icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+            // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+            icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+            // Ajusta la posició horitzontal de la icona a la dreta
+            icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
         };
         // Funció per fer scroll cap amunt
         function scrollToTop() {
@@ -133,5 +164,6 @@
         // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
         iconaScroll.addEventListener('click', scrollToTop);
     </script>
+    
 </body>
 </html>
