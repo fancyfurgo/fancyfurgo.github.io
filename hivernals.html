@@ -40,6 +40,19 @@
              font-size: 20px;
              text-align: justify;
          }
+         
+         /* Estils per als enllaços */
+        a {
+            color: #245777; /* un color diferent perquè es vegi que hi ha un link. inherit: hereta el color del text del seu element pare */
+            text-decoration: none; /* Elimina el subratllat dels enllaços */
+            transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
+        }
+
+        /* Estil quan es passa el cursor sobre l'enllaç */
+        a:hover {
+        color: #ff6600; /* Canvia el color quan es passa el cursor */
+        }
+         
          footer {
              height: 100px;
              /*padding: 50px;
@@ -69,17 +82,7 @@
         section:nth-child(even) {
             background-color: #cae6ff; /* Color alternat diferent */
         }
-         /* Estils per als enllaços */
-        a {
-            color: #245777; /* un color diferent perquè es vegi que hi ha un link. inherit: hereta el color del text del seu element pare */
-            text-decoration: none; /* Elimina el subratllat dels enllaços */
-            transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
-        }
 
-        /* Estil quan es passa el cursor sobre l'enllaç */
-        a:hover {
-        color: #ff6600; /* Canvia el color quan es passa el cursor */
-        }
 
         .contenidor-grampons {
             display: flex;
