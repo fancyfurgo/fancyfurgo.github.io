@@ -52,36 +52,86 @@
             background-color: #e5f2ff; /* Color alternat */
         }
 
+         .contenidor-matinals {
+            display: flex;
+            flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+            gap: 5px; /* Espai entre les imatges */
+            justify-content: space-between; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            float: center;
+            margin-right: 20px; 
+            margin-left: 20px;
+        }
+         
+         .contenidor-matinals img { 
+             width: 300px; /* Amplada de la imatge */
+             height: 300px; /* Alçada de la imatge */
+             object-fit: cover; /* Manté la proporció de la imatge */
+             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+             margin-right: 50px;
+             margin-left: 50px;
+             margin-bottom: 10px;
+             min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
+         } 
+
         /* Estil per a seccions parells (color alternat) */
         section:nth-child(even) {
             background-color: #cae6ff; /* Color alternat diferent */
         }
 
-         #qui-soc {
-             padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
-             overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
-         }
-         
-         #qui-soc img {
-            display: block; /* Fer que la imatge es comporti com un bloc */
-            width: 100%; /* Amplada de la imatge al 100% del seu contenidor */ 
-            margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
-            /* float: left;  Aliniar la imatge a l'esquerra */
-            /* margin-right: 20px;  Espai de margin a la dreta de la imatge */
-            /* border-radius: 10px;  Raconeres arrodonides de la imatge */
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */ 
-            /* height: auto;  Alçada automàtica per mantenir la proporció */
+        /* Estils per al botó de scroll-up */
+         .icona-scroll {
+             position: fixed;
+             top: 20px; /* Distància desitjada des del top */
+             right: 0; /* Distància desitjada a la dreta */
+             width: 60px;
+             height: auto;
+             transition: bottom 0.3s ease; /* Transició suau del moviment */
+             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
-    <h1>Noruega amb la fancyfurgo</h1>
-    <p>Aquí estic, intentant crear el meu primer enllaç a la pàgina principal</p>
-    <section id="road-trips">
-        <h2>Noruega</h2>
-        <p>Aquí escriuré el meu 1r blog</p>
-
+    <h1>Sortides matinals</h1>
+    <div class="contenidor-matinals">
+        <a href=#montserrat>
+            <img src="matinals cercle.png" alt="foto de les matinals">
+            <footer>Montserrat</footer>
+        </a>
+    </div>
+    <section id="matinals">
+        <h2>Montserrat</h2>
+        <p>He de fer el recopilatori</p>
     </section>
+    <img src="scroll matinals.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    
+    <script>
+        // Valors per ajustar la velocitat de moviment de la icona
+        var pantallaTotal = document.documentElement.scrollHeight; // Alçada total de la pàgina en píxels
+        var finestraVisible = window.innerHeight; // Alçada de la finestra visible en píxels
+        var ratioMoviment = finestraVisible / pantallaTotal; // Ratio de moviment (0 a 1, quan més petit, més ràpid)
+     
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+        var icona = document.getElementById('iconaScroll');
+        var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            
+        // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+        icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+        // Ajusta la posició horitzontal de la icona a la dreta
+        icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+        };
+        // Funció per fer scroll cap amunt
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        // Selecciona l'element de la icona de scroll cap amunt
+        var iconaScroll = document.getElementById('iconaScroll');
+        // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
+        iconaScroll.addEventListener('click', scrollToTop);
+    </script>
 </body>
 </html>
