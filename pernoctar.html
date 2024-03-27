@@ -111,20 +111,7 @@
              height: auto;
              transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
-             z-indez: 2;
         }
-
-         /* Afegir la corda del rapel, per la broma del scroll */
-         .linea-rosa {
-             position: fixed; /* La línia es posiciona respecte al cos de la pàgina */
-             top: 0; /* Posició a la part superior de la pàgina */
-             height: 100%;
-             right: 10px; /* Distància del marge lateral dret */
-             width: 2px; /* Amplada de la línia */
-             /* height: 100vh;  Alçada que ocupa tota l'alçada de la pàgina */
-             background-color: #fc84bb; /* Color rosa de la línia */
-             z-index: 1;
-         }
         
     </style>
 </head>
@@ -177,8 +164,7 @@
         <h2>Alta Garrotxa</h2>
         <p>Una nit de terror.</p>
     </section>
-    <div class="linea-rosa"></div>
-    <img src="scroll rapel.png.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    <img src="scroll senserisme.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     
     <script>
         // Valors per ajustar la velocitat de moviment de la icona
@@ -188,13 +174,13 @@
      
         // Funció per actualitzar la posició de la icona
         window.onscroll = function() {
-            var icona = document.getElementById('iconaScroll');
-            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var icona = document.getElementById('iconaScroll');
+        var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
             
-            // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
-            icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
-            // Ajusta la posició horitzontal de la icona a la dreta
-            icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+        // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+        icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+        // Ajusta la posició horitzontal de la icona a la dreta
+        icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
         };
         // Funció per fer scroll cap amunt
         function scrollToTop() {
