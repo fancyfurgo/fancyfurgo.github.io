@@ -70,7 +70,7 @@
         }
          /* Estils per als enllaços */
         a {
-            color: inherit; /* Hereta el color del text del seu element pare */
+            color: #245777; /* color diferent. inherit: Hereta el color del text del seu element pare */
             text-decoration: none; /* Elimina el subratllat dels enllaços */
             transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
         }
@@ -102,21 +102,32 @@
              min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
          } 
 
-         /* Botó per fer scroll-up */
-         #scroll-to-top-btn {
+         
+         
+         }
+         /* Estils per al botó de scroll-up */
+         .icona-scroll {
              position: fixed;
-             bottom: 20px;
-             right: 20px;
+             margin: 0; 
+             width: 80px;
+             height: auto;
+             transition: bottom 0.3s ease; /* Transició suau del moviment */
              cursor: pointer;
-             background-color: #333;
-             color: #fff;
-             padding: 10px;
-             border-radius: 50%;
-             display: none; /* Oculta l'icona inicialment */
-         }
-         #scroll-to-top-btn:hover {
-             background-color: #555;
-         }
+             z-indez: 1;
+        }
+
+         /* Afegir la corda del rapel, per la broma del scroll */
+         .linea-blanca {
+             position: fixed; /* La línia es posiciona respecte al cos de la pàgina */
+             top: 0; /* Posició a la part superior de la pàgina */
+             height: 100%;
+             right: 10px; /* Distància del marge lateral dret */
+             width: 10px; /* Amplada de la línia */
+             /* height: 100vh;  Alçada que ocupa tota l'alçada de la pàgina */
+             background-color: white ; /* Color blanc de la línia */
+             z-index: 2;
+         } 
+
 
     </style>
 </head>
@@ -185,11 +196,37 @@
         <p>Nosaltres vam fer tota la pujada pel circuit i després vam baixar fins al encreuament amb les pistes de esquí alpí. Allà vam descansar i vam tornar a pujar per repetir la baixada. I mira que teníem les cames rebentades, però havíem de repetir aquella baixada entre arbres i arbustos que tant ens havia fet pujar l’adrenalina. Quins crits a cada gir, quina emoció! La baixada des del encreuament amb les pistes d’alpí fins al cotxe va ser per una blava facileta i amb poca gent, però ja necessitàvem aquest “descans”, va ser una baixada a full speed acompanyada de crits d’eufòria. </p>
         <p>Quin grupet més maco, i quines ganes de repetir amb ells i elles. </p>
     </section>
-    <div id="scroll-to-top-btn">
-        
-        <i class="fas fa-arrow-up"></i> <!-- Font Awesome icon per la fletxa cap amunt -->
-    </div>
+    
+    <div class="linea-blanca"></div>
+    <img src="scroll_skimo.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    
+    <script>
+        // Valors per ajustar la velocitat de moviment de la icona
+        var pantallaTotal = document.documentElement.scrollHeight; // Alçada total de la pàgina en píxels
+        var finestraVisible = window.innerHeight; // Alçada de la finestra visible en píxels
+        var ratioMoviment = finestraVisible / pantallaTotal; // Ratio de moviment (0 a 1, quan més petit, més ràpid)
      
-    <script src="script.js"></script>
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+            var icona = document.getElementById('iconaScroll');
+            var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            
+            // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+            icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+            // Ajusta la posició horitzontal de la icona a la dreta
+            icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+        };
+        // Funció per fer scroll cap amunt
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        // Selecciona l'element de la icona de scroll cap amunt
+        var iconaScroll = document.getElementById('iconaScroll');
+        // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
+        iconaScroll.addEventListener('click', scrollToTop);
+    </script>
 </body>
 </html>
