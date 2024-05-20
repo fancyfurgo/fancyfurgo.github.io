@@ -6,6 +6,8 @@
     <title>Altres</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 
      <style>
          /* Estils per a la pàgina en general */
@@ -61,6 +63,7 @@
              text-align: center;
              margin-top: 5px;
          }
+        
          
         /* Estils per a les seccions com a quadres de text amb colors alternats */
         section {
@@ -125,6 +128,22 @@
              z-indez: 2;
         }
 
+         .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Espai entre les imatges */
+        }
+        .gallery img {
+            width: 150px; /* Amplada de les miniatures */
+            height: auto; /* Manté la proporció de les imatges */
+            border: 2px solid #fff; /* Marc de les imatges */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombra de les imatges */
+            transition: transform 0.2s; /* Transició per fer efecte de zoom */
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* Efecte de zoom en passar el cursor per sobre */
+        }
+
         
     </style>
 </head>
@@ -161,7 +180,13 @@
         <p>De baixada, parem a Sant Feliu de Pallerols, poble on el Guillem va passar alguns estius de petit, i on el Martí hi té un amic, ens porta al lloc més simbòlic del poble i llegim la <a href="https://santfeliudepallerols.cat/coneix/festes-i-tradicions/llegendes/"> <u>llegenda dels Pescallunes</u></a>. Un cop arribats a Amer, traient la roda del davant m'adono que la meva anava prou afluixada, i ens riem de la possibilitat desastrosa que hauria sigut perdre la roda.</p>
         <p>Ha sigut molt una molt bona sortida!</p>
     </section>
-    
+    <div class="gallery">
+        <a href="img1_large.jpg" data-lightbox="mygallery"><img src="img1_thumb.jpg" alt="Imatge 1"></a>
+        <a href="img2_large.jpg" data-lightbox="mygallery"><img src="img2_thumb.jpg" alt="Imatge 2"></a>
+        <a href="img3_large.jpg" data-lightbox="mygallery"><img src="img3_thumb.jpg" alt="Imatge 3"></a>
+        <!-- Afegeix més imatges de la mateixa manera -->
+    </div>
+    sss
     <img src="bicicleta.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
     
     <script>
