@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Senderisme amb pernocta</title>
+    <script src="events.js"></script> <!-- JavaScript to handle data -->
+    <style>
+        .event {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .event img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Senderisme amb pernocta</h1>
+    <div id="event-list"></div>
+
+    <script>
+        fetch('events.json')
+        .then(response => response.json())
+        .then(events => {
+            const tag = "pernocta"; // This page is for the "pernocta" tag
+            const filteredEvents = events.filter(event => event.tags.includes(tag));
+
+            const eventList = document.getElementById("event-list");
+            filteredEvents.forEach(event => {
+                const eventItem = document.createElement("div");
+                eventItem.classList.add("event");
+                eventItem.innerHTML = `
+                    <a href="${event.link}">
+                        <img src="${event.image}" alt="${event.title}">
+                    </a>
+                    <div>
+                        <h2><a href="${event.link}">${event.title}</a></h2>
+                        <p>${event.description}</p>
+                    </div>
+                `;
+                eventList.appendChild(eventItem);
+            });
+        })
+        .catch(error => console.error("Error loading events:", error));
+    </script>
+</body>
+</html>
