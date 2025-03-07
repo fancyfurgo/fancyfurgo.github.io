@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Vinyemal, 3.298 m",
+    "description": "El meu primer 3000m!",
+    "tags": ["pernocta", "alta muntanya", "glacera"],
+    "link": "vinyemal.html",
+    "image": "vinyemal_cercle.png"
+  },
+  {
+    "title": "Monte Perdido, 3.355m",
+    "description": "I nosaltres perduts. Primer cop trucant al 112.",
+    "tags": ["pernocta", "alta muntanya"],
+    "link": "perdido.html",
+    "image": "perdido_cercle.png"
+  }
+]
