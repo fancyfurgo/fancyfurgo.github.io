@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinyemal, 3.298 m</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Vinyemal, 3.298 m</h1>
+    
+    <img src="vinyemalportada.jpg" alt="Vistes des del cim del Vinyemal">
+    
+    <section>
+        <p><b>El meu primer 3000m!</b></p>
+        <p>Amb moltes ganes de començar l’estiu, presento el TFM a mitjans de juliol, i el dijous següent posem rumb a Pont d’Espanya...</p>
+
+        <ul>
+            <li><b>Època:</b> Estival. Mitjans de juliol.</li>
+            <li><b>Dates:</b> 21-23 de juliol 2023.</li>
+            <li><b>Km i desnivell:</b> 13 Km i 1.300 m de desnivell positiu.</li>
+            <li><b>Track:</b> <a href="https://fr.wikiloc.com/itineraires-alpinisme/pont-despagne-a-refugio-bayssellance-1-30142243" target="_blank"><u>Wikiloc</u></a></li>
+        </ul>
+        
+        <h2>Galeria de fotos</h2>
+        <div class="contenidor-galeria"> 
+           <a href="https://www.instagram.com/p/Cxyz123/">
+               <img src="vignemale1.jpg" alt="Paisatge durant la ruta">
+           </a>
+           <a href="https://www.instagram.com/p/Cxyz456/">
+               <img src="vignemale2.jpg" alt="Refugi de Baysellance">
+           </a>
+        </div>
+
+        <h2>Altres excursions similars</h2>
+        <div id="related-events"></div>
+    </section>
+
+    <script>
+        fetch('events.json')
+        .then(response => response.json())
+        .then(events => {
+            const currentTags = ["pernocta", "alta muntanya", "glacera"]; // Tags de Vinyemal
+            const relatedEvents = events.filter(event => event.tags.some(tag => currentTags.includes(tag)) && event.title !== "Vinyemal, 3.298 m");
+
+            const relatedDiv = document.getElementById("related-events");
+            relatedEvents.forEach(event => {
+                const eventItem = document.createElement("div");
+                eventItem.classList.add("event");
+                eventItem.innerHTML = `
+                    <a href="${event.link}">
+                        <img src="${event.image}" alt="${event.title}">
+                    </a>
+                    <div>
+                        <h3><a href="${event.link}">${event.title}</a></h3>
+                        <p>${event.description}</p>
+                    </div>
+                `;
+                relatedDiv.appendChild(eventItem);
+            });
+        })
+        .catch(error => console.error("Error loading events:", error));
+    </script>
+</body>
+</html>
