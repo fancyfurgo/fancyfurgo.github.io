@@ -34,11 +34,11 @@
                 const eventItem = document.createElement("div");
                 eventItem.classList.add("event");
                 eventItem.innerHTML = `
-                    <a href="${event.folder + event.page}">
-                        <img src="${event.folder + event.image}" alt="${event.title}">
+                    <a href="${event.folder} + ${event.page}">
+                        <img src="${event.folder} + ${event.image}" alt="${event.title}">
                     </a>
                     <div>
-                        <h2><a href="${event.folder+event.page}">${event.title}</a></h2>
+                        <h2><a href="${event.folder}+${event.page}">${event.title}</a></h2>
                         <p>${event.description}</p>
                     </div>
                 `;
