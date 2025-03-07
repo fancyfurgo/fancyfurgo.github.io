@@ -1,18 +1,45 @@
 [
   {
+    "id": "2024_01_01_vinyemal",
     "title": "Vinyemal, 3.298 m",
     "description": "El meu primer 3000m!",
     "tags": ["pernocta", "alta muntanya", "glacera"],
-    "folder": "../sortides/vinyemal/",
+    "folder": "2024_01_01_vinyemal/",
     "page": "vinyemal.html",
-    "image": "vinyemal_cercle.png"
+    "image": "vinyemal cercle.png",
+    "gallery": [
+      {
+        "image": "2024_01_01_vinyemal/vignemale1.jpg",
+        "alt": "Paisatge durant la ruta",
+        "link": "https://www.instagram.com/p/Cxyz123/"
+      },
+      {
+        "image": "2024_01_01_vinyemal/vignemale2.jpg",
+        "alt": "Refugi de Baysellance",
+        "link": "https://www.instagram.com/p/Cxyz456/"
+      }
+    ]
+
   },
   {
+    "id": "2024_01_01_perdido",
     "title": "Monte Perdido, 3.355m",
     "description": "I nosaltres perduts. Primer cop trucant al 112.",
     "tags": ["pernocta", "alta muntanya"],
-    "folder": "../sortides/perdido/",
+    "folder": "2024_01_01_perdido/",
     "page": "perdido.html",
-    "image": "perdido_cercle.png"
+    "image": "perdido cercle.png",
+    "gallery": [
+      {
+        "image": "2024_01_01_perdido/perdido1.jpg",
+        "alt": "Pujant a Monte Perdido",
+        "link": "https://www.instagram.com/p/Cxyz123/"
+      },
+      {
+        "image": "2024_01_01_perdido/perdido2.jpg",
+        "alt": "Refugi de Tucarroya",
+        "link": "https://www.instagram.com/p/Cxyz456/"
+      }
+    ]
   }
 ]

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Pàgina Dinàmica</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&display=swap">
+    <style>
+        body {
+            background-color: #245777;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 70px;
+        }
+        section {
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background-color: #e5f2ff;
+            color: black;
+        }
+        .contenidor-sortidesetiqueta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .contenidor-sortidesetiqueta a {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        .contenidor-sortidesetiqueta img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="page-header">Carregant...</h1>
+    <section id="intro-section">
+        <p id="intro-text">Carregant...</p>
+    </section>
+    <div class="contenidor-sortidesetiqueta" id="event-list"></div>
+
+    <script>
+        async function loadData() {
+            const params = new URLSearchParams(window.location.search);
+            const tag = params.get("tag");
+
+            if (!tag) {
+                document.getElementById("page-header").innerText = "Error: No s'ha especificat cap etiqueta.";
+                return;
+            }
+
+            let tagsResponse = [];
+            let eventsResponse = [];
+            try {
+              const responses = await Promise.all([
+                  fetch('etiquetes.json').then(res => res.json()),
+                  fetch('sortides.json').then(res => res.json())
+              ]);
+
+              tagsResponse = responses[0];
+              eventsResponse = responses[1];
+            } catch (error) {
+                console.error("Error carregant dades:", error);
+                document.getElementById("page-header").innerText = "Error carregant dades.";
+                document.getElementById("intro-text").innerText = "No s'han pogut carregar els arxius JSON.";
+            }
+            try {
+                const tagData = tagsResponse.find(t => t.name === tag);
+                if (!tagData) {
+                    document.getElementById("page-header").innerText = "Etiqueta no trobada";
+                    document.getElementById("intro-text").innerText = "L'etiqueta \"" + tag + "\" no existeix en el sistema.";
+                    return;
+                }
+
+                document.getElementById("page-title").innerText = tagData.title;
+                document.getElementById("page-header").innerText = tagData.title;
+                document.getElementById("intro-text").innerText = tagData.intro;
+
+                const filteredEvents = eventsResponse.filter(event => event.tags.includes(tag));
+                const eventList = document.getElementById("event-list");
+                eventList.innerHTML = "";
+
+                filteredEvents.forEach(event => {
+                    const eventItem = document.createElement("a");
+                    eventItem.href = `${event.folder}${event.page}`;
+                    eventItem.innerHTML = `
+                        <img src="${event.folder}${event.image}" alt="${event.title}">
+                        <footer>${event.title}</footer>
+                    `;
+                    eventList.appendChild(eventItem);
+                });
+            } catch (error) {
+                console.error("Error carregant dades:", error);
+                document.getElementById("page-header").innerText = "Error carregant dades.";
+                document.getElementById("intro-text").innerText = "No s'han pogut carregar les dades amb l'etiqueta \"" + tag + "\". Comprova els fitxers JSON.";
+            }
+        }
+        loadData();
+    </script>
+</body>
+</html>

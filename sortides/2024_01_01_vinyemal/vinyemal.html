@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Vinyemal, 3.298 m</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <h1>Vinyemal, 3.298 m</h1>
+
+    <!--<img src="perdido portada.jpg" alt="Monte Perdido">-->
+
+    <section>
+        <p><b>El meu primer 3000m!</b></p>
+        <p>Amb moltes ganes de començar l’estiu, presento el TFM a mitjans de juliol, i el dijous següent posem rumb a Pont d’Espanya...</p>
+
+        <ul>
+            <li><b>Època:</b> Estival. Mitjans de juliol.</li>
+            <li><b>Dates:</b> 21-23 de juliol 2023.</li>
+            <li><b>Km i desnivell:</b> 13 Km i 1.300 m de desnivell positiu.</li>
+            <li><b>Tracks:</b>
+              <ul>
+                  <!-- Contenidor dels mapes embeguts amb el text sobre el mapa -->
+                  <div class="wikiloc-maps-container">
+                      <div class="map-item">
+                          <li>1r dia: <a href="https://fr.wikiloc.com/itineraires-alpinisme/pont-despagne-a-refugio-bayssellance-1-30142243" target="_blank"><u>Ruta</u></a></li>
+                          <iframe frameBorder="0" scrolling="no" src="https://fr.wikiloc.com/wikiloc/embedv2.do?id=30142243&elevation=off&images=off&maptype=H" width="600" height="500"></iframe><div style="color:#777;font-size:11px;line-height:16px;">Powered by&nbsp;<a style="color:#4C8C2B;font-size:11px;line-height:16px;" target="_blank" href="https://fr.wikiloc.com">Wikiloc</a></div>
+                      </div>
+                  </div>
+              </ul>
+            </li>
+        </ul>
+      
+        <h2>Galeria de fotos</h2>
+        <div class="contenidor-galeria" id="event-gallery"></div>
+
+        <h2>Altres excursions similars</h2>
+        <div class="contenidor-llistasortides" id="related-events"></div>
+
+    </section>
+
+    <!-- Include the external JS file -->
+    <script src="../sortidesSimilars.js"></script>
+
+    <script>
+      // Variables for the current event (for demo purposes, this can be dynamic)
+      const currentEventId = "2024_01_01_vinyemal"; // This should be dynamically fetched
+
+      // Load similar events when the page loads
+      loadEventGallery(currentEventId);
+      loadSimilarEvents(currentEventId);
+    </script>
+
+</body>
+</html>

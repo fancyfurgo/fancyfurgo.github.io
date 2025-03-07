@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Monte Perdido, 3.355m</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <h1>Monte Perdido, 3.355m</h1>
+
+    <!--<img src="perdido portada.jpg" alt="Monte Perdido">-->
+
+    <section>
+        <p><b>Segona ruta de 3.000m i primer cop trucant al 112!</b></p>
+        <p>Ruta de dos dies per Ordesa, fent nit al refugi lliure de Tucarroya...</p>
+
+        <ul>
+            <li><b>Època:</b> Principis de tardor, cap de setmana de La Mercè, 2023.</li>
+            <li><b>Dificultat:</b> No és un passeig.</li>
+            <li><b>Material específic:</b> El just i necessari per pernoctar.</li>
+            <li><b>Ruta:</b> Circular de dos dies. Dormim a <a href="https://www.walkaholic.me/es/refugio/espana/aragon/huesca/232-refugio-de-tucarroya" target="_blank"><u>Tucarroya</u></a>.</li>
+            <li><b>Zona:</b> Parc Nacional d'Ordesa i Monte Perdido, Aragó.</li>
+            <li><b>Punt de sortida:</b> <a href="https://g.co/kgs/U9QrwWn" target="_blank"><u>Valle de Pineta</u></a>.</li>
+            <li><b>Tracks:</b>
+              <ul>
+                  <!-- Contenidor dels mapes embeguts amb el text sobre el mapa -->
+                  <div class="wikiloc-maps-container">
+                      <div class="map-item">
+                          <li>1r dia: <a href="https://www.wikiloc.com/hiking-trails/refugio-de-tucarroya-2-666-m-desde-pineta-20160999" target="_blank"><u>Ruta al Refugi de Tucarroya</u></a></li>
+                          <iframe frameBorder="0" scrolling="no" src="https://www.wikiloc.com/wikiloc/embedv2.do?id=20160999&elevation=off&images=off&maptype=H" width="100%" height="500"></iframe>
+                      </div>
+
+                      <div class="map-item">
+                          <li>2n dia: <a href="https://www.wikiloc.com/hiking-trails/refugio-de-tucarroya-2-666-m-desde-pineta-20160999" target="_blank"><u>Ruta Circular a Monte Perdido</u></a></li>
+                          <iframe frameBorder="0" scrolling="no" src="https://www.wikiloc.com/wikiloc/embedv2.do?id=144215073&elevation=off&images=off&maptype=H" width="100%" height="500"></iframe>
+                      </div>
+                  </div>
+              </ul>
+            </li>
+        </ul>
+
+        <h2>Galeria de fotos</h2>
+        <div class="contenidor-galeria" id="event-gallery"></div>
+
+        <h2>Altres excursions similars</h2>
+        <div class="contenidor-llistasortides" id="related-events"></div>
+
+    </section>
+
+    <!-- Include the external JS file -->
+    <script src="../sortidesSimilars.js"></script>
+
+    <script>
+      // Variables for the current event (for demo purposes, this can be dynamic)
+      const currentEventId = "2024_01_01_perdido"; // This should be dynamically fetched
+
+      // Load similar events when the page loads
+      loadEventGallery(currentEventId);
+      loadSimilarEvents(currentEventId);
+    </script>
+
+</body>
+</html>

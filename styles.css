@@ -12,28 +12,28 @@ body {
           /* margin: 40px; */
           /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
 }
-          
+
 h1 {
           color: white;
           text-align: center; /* Centrat */
           font-weight: bold; /* Negreta */
-          font-family: 'Roboto Condensed', sans-serif; 
+          font-family: 'Roboto Condensed', sans-serif;
           font-size: 70px; /* Mida de la lletra */
 }
 h2 {
           color: black;
-          font-family: 'Roboto Condensed', sans-serif; 
+          font-family: 'Roboto Condensed', sans-serif;
           font-size: 30px; /* Mida de la lletra */
 }
 p {
           color: black;
-          font-family: 'Cabin', sans-serif; 
-          font-size: 20px; 
+          font-family: 'Cabin', sans-serif;
+          font-size: 20px;
           text-align: justify;
 }
 li {
           color: black;
-          font-family: 'Cabin', sans-serif; 
+          font-family: 'Cabin', sans-serif;
           font-size: 20px;
           text-align: justify;
 }
@@ -41,12 +41,12 @@ footer {
           height: 100px;
           /*padding: 50px;
           marging: 50px; */
-          font-size: 30px; 
-          font-family: 'Roboto Condensed', sans-serif; 
+          font-size: 30px;
+          font-family: 'Roboto Condensed', sans-serif;
           font-weight: bold;
           text-align: center;
           margin-top: 5px;
-}        
+}
 .contenidor-inicial {
           display: flex;
           flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
@@ -57,8 +57,8 @@ footer {
           float: center;
           /* margin-right: 20px;  */
 }
-         
-.contenidor-inicial img { 
+
+.contenidor-inicial img {
           width: 300px; /* Amplada de la imatge */
           height: 300px; /* Alçada de la imatge */
           object-fit: cover; /* Manté la proporció de la imatge */
@@ -67,8 +67,51 @@ footer {
           margin-left: 50px;
           margin-bottom: 10px;
           min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
-} 
+}
 
+.contenidor-llistasortides {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+.contenidor-llistasortides a {
+    display: flex;  /* Make <a> a flex container */
+    flex-direction: column;  /* Stack items vertically (image on top, text below) */
+    align-items: center;  /* Center align children (both image and text) */
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.contenidor-llistasortides img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Estils per a les rutes embegudes */
+.wikiloc-maps-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px; /* Space between maps */
+    padding: 0 10px; /* Space between maps and the edges of the screen */
+    flex-wrap: wrap; /* Allow maps to wrap on smaller screens */
+}
+
+.map-item {
+    display: flex;
+    flex-direction: column; /* Stack text above the map */
+    align-items: center; /* Center everything horizontally */
+    flex: 1;
+    max-width: 800px; /* Maximum width for each map */
+    min-width: 480px; /* Minimum width to ensure they don't shrink too small */
+    margin-bottom: 20px; /* Space below each map */
+}
+
+.map-item iframe {
+    width: 100%; /* Ensure the iframe takes the full width of its parent container */
+    height: 500px; /* Fixed height for the maps */
+}
 /* Estils per a les seccions com a quadres de text amb colors alternats */
 section {
           padding: 30px;
@@ -91,15 +134,15 @@ section:nth-child(even) {
           padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
           overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
 }
-         
+
 #qui-soc img {
             display: block; /* Fer que la imatge es comporti com un bloc */
-            width: 100%; /* Amplada de la imatge al 100% del seu contenidor */ 
+            width: 100%; /* Amplada de la imatge al 100% del seu contenidor */
             margin: 0 auto; /* Centrar horitzontalment (0 a dalt/baix, auto a l'esquerra/dreta) */
             /* float: left;  Aliniar la imatge a l'esquerra */
             /* margin-right: 20px;  Espai de margin a la dreta de la imatge */
             /* border-radius: 10px;  Raconeres arrodonides de la imatge */
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */ 
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  Ombra de la imatge */
             /* height: auto;  Alçada automàtica per mantenir la proporció */
 }
 
@@ -119,10 +162,10 @@ a:hover {
              padding-left: 20px; /* Espai de padding a l'esquerra de la secció */
              overflow: hidden; /* Evita que altres elements 'flotin' al costat de la imatge */
 }
-         
+
 #inici-projecte img {
             display: block; /* Fer que la imatge es comporti com un bloc */
-            width: 200px; /* Amplada de la imatge al 100% del seu contenidor */ 
+            width: 200px; /* Amplada de la imatge al 100% del seu contenidor */
             height: auto; /* Alçada automàtica per mantenir la proporció */
             float: left;  /* Aliniar la imatge a l'esquerra */
             margin: 20px; /* Espai de margin a tots els costats de la imatge */
@@ -146,4 +189,3 @@ a:hover {
 #scroll-to-top-btn:hover {
     background-color: #555;
 }
-
