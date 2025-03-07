@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Monte Perdido, 3.355m</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Monte Perdido, 3.355m</h1>
+
+    <img src="perdidoportada.jpg" alt="Monte Perdido">
+
+    <section>
+        <p><b>Segona ruta de 3.000m i primer cop trucant al 112!</b></p>
+        <p>Ruta de dos dies per Ordesa, fent nit al refugi lliure de Tucarroya...</p>
+
+        <ul>
+            <li><b>Època:</b> Principis de tardor, cap de setmana de La Mercè, 2023.</li>
+            <li><b>Dificultat:</b> No és un passeig.</li>
+            <li><b>Material específic:</b> El just i necessari per pernoctar.</li>
+            <li><b>Ruta:</b> Circular de dos dies. Dormim a <a href="https://www.walkaholic.me/es/refugio/espana/aragon/huesca/232-refugio-de-tucarroya" target="_blank"><u>Tucarroya</u></a>.</li>
+            <li><b>Zona:</b> Parc Nacional d'Ordesa i Monte Perdido, Aragó.</li>
+            <li><b>Punt de sortida:</b> <a href="https://g.co/kgs/U9QrwWn" target="_blank"><u>Valle de Pineta</u></a>.</li>
+            <li><b>Tracks:</b> 
+                <ul>
+                    <li>1r dia: <a href="https://www.wikiloc.com/hiking-trails/refugio-de-tucarroya-2-666-m-desde-pineta-20160999" target="_blank"><u>Wikiloc</u></a></li>
+                    <li>2n dia: <a href="https://www.wikiloc.com/mountaineering-trails/circular-a-monte-perdido-144215073" target="_blank"><u>Wikiloc</u></a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Galeria de fotos</h2>
+        <div class="contenidor-galeria"> 
+           <a href="https://www.instagram.com/p/Cxyz123/">
+               <img src="perdido1.jpg" alt="Pujant a Monte Perdido">
+           </a>
+           <a href="https://www.instagram.com/p/Cxyz456/">
+               <img src="perdido2.jpg" alt="Refugi de Tucarroya">
+           </a>
+        </div>
+
+        <h2>Altres excursions similars</h2>
+        <div id="related-events"></div>
+    </section>
+
+    <script>
+        fetch('events.json')
+        .then(response => response.json())
+        .then(events => {
+            const currentTags = ["pernocta", "alta muntanya"]; // Tags de Monte Perdido
+            const relatedEvents = events.filter(event => event.tags.some(tag => currentTags.includes(tag)) && event.title !== "Monte Perdido, 3.355m");
+
+            const relatedDiv = document.getElementById("related-events");
+            relatedEvents.forEach(event => {
+                const eventItem = document.createElement("div");
+                eventItem.classList.add("event");
+                eventItem.innerHTML = `
+                    <a href="${event.link}">
+                        <img src="${event.image}" alt="${event.title}">
+                    </a>
+                    <div>
+                        <h3><a href="${event.link}">${event.title}</a></h3>
+                        <p>${event.description}</p>
+                    </div>
+                `;
+                relatedDiv.appendChild(eventItem);
+            });
+        })
+        .catch(error => console.error("Error loading events:", error));
+    </script>
+</body>
+</html>
