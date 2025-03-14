@@ -1,20 +1,20 @@
 [
   {
-    "id": "2024_01_01_vinyemal",
+    "id": "2023_07_vinyemal",
+    "folder": "2023/2023_07_vinyemal/",
     "title": "Vinyemal, 3.298 m",
     "description": "El meu primer 3000m!",
     "tags": ["pernocta", "alta muntanya", "glacera"],
-    "folder": "2024_01_01_vinyemal/",
     "page": "vinyemal.html",
     "image": "vinyemal cercle.png",
     "gallery": [
       {
-        "image": "2024_01_01_vinyemal/vignemale1.jpg",
+        "image": "vignemale1.jpg",
         "alt": "Paisatge durant la ruta",
         "link": "https://www.instagram.com/p/Cxyz123/"
       },
       {
-        "image": "2024_01_01_vinyemal/vignemale2.jpg",
+        "image": "vignemale2.jpg",
         "alt": "Refugi de Baysellance",
         "link": "https://www.instagram.com/p/Cxyz456/"
       }
@@ -22,21 +22,32 @@
 
   },
   {
-    "id": "2024_01_01_perdido",
+    "id": "2023_04_aland",
+    "folder": "2023/2023_04_aland/",
+    "title": "Les Illes Åland en furgo",
+    "description": "Les Illes Åland en furgo, 2 nits de primavera",
+    "tags": ["furgo", "viatge", "primavera", "finlandia"],
+    "page": "aland.html",
+    "image": "fancyfurgo blau.png",
+    "gallery": []
+
+  },
+  {
+    "id": "2023_09_perdido",
+    "folder": "2023/2023_09_perdido/",
     "title": "Monte Perdido, 3.355m",
     "description": "I nosaltres perduts. Primer cop trucant al 112.",
     "tags": ["pernocta", "alta muntanya"],
-    "folder": "2024_01_01_perdido/",
     "page": "perdido.html",
     "image": "perdido cercle.png",
     "gallery": [
       {
-        "image": "2024_01_01_perdido/perdido1.jpg",
+        "image": "perdido1.jpg",
         "alt": "Pujant a Monte Perdido",
         "link": "https://www.instagram.com/p/Cxyz123/"
       },
       {
-        "image": "2024_01_01_perdido/perdido2.jpg",
+        "image": "perdido2.jpg",
         "alt": "Refugi de Tucarroya",
         "link": "https://www.instagram.com/p/Cxyz456/"
       }

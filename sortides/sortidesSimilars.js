@@ -1,7 +1,7 @@
 
 // Function to load Gallery section
 function loadEventGallery(currentEventId) {
-  fetch('../sortides.json')
+  fetch('../../sortides.json')
     .then(response => response.json())
     .then(events => {
       // Find the current event and extract its tags
@@ -24,7 +24,7 @@ function loadEventGallery(currentEventId) {
 
 // Function to load and display related events
 function loadSimilarEvents(currentEventId) {
-  fetch('../sortides.json')
+  fetch('../../sortides.json')
     .then(response => response.json())
     .then(events => {
       // Find the current event and extract its tags
@@ -55,10 +55,12 @@ function loadSimilarEvents(currentEventId) {
         eventItem.innerHTML = `
           <a href="../${event.folder}${event.page}">
             <img src="../${event.folder}${event.image}" alt="${event.title}">
+            <footer>${event.title}</footer>
           </a>
+        <!--
           <div>
             <h3><a href="../${event.folder}${event.page}">${event.title}</a></h3>
-          </div>
+          </div>-->
         `;
         relatedDiv.appendChild(eventItem);
       });

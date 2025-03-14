@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ca"> <!-- 'ca' és el codi ISO per al català -->
+<head>
+    <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senderisme amb pernocta</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin&display=swap">
+
+     <!--<style>
+         /* Estils per a la pàgina en general */
+        body {
+            background-color: #245777; /* Blau claret, ves a aquesta pag web per trobar colros: https://encycolorpedia.es/ */
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif; 
+            /* font-family: 'Cabin', sans-serif;  Utilitza aquesta web per trobar combinacions de fonst: https://heyreliable.com/ultimate-google-font-pairings/ */
+        }
+          /* Estils per al títol */
+        h1 {
+            color: white;
+            text-align: center; /* Centrat */
+            font-weight: bold; /* Negreta */
+            font-family: 'Roboto Condensed', sans-serif; 
+            font-size: 70px; /* Mida de la lletra */
+        }
+         h2 {
+            color: black;
+            font-family: 'Roboto Condensed', sans-serif; 
+            font-size: 30px; /* Mida de la lletra */
+         }
+         p {
+             color: black;
+             font-family: 'Cabin', sans-serif; 
+             font-size: 20px; 
+             text-align: justify;
+         }
+         li {
+             color: black;
+             font-family: 'Cabin', sans-serif; 
+             font-size: 20px;
+             text-align: justify;
+         }
+         footer {
+             height: 100px;
+             /*padding: 50px;
+             marging: 50px; */
+             font-size: 30px; 
+             font-family: 'Roboto Condensed', sans-serif; 
+             font-weight: bold;
+             text-align: center;
+             margin-top: 5px;
+         }
+         
+        /* Estils per a les seccions com a quadres de text amb colors alternats */
+        section {
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estil per a seccions imparells (color alternat) */
+        section:nth-child(odd) {
+            background-color: #e5f2ff; /* Color alternat */
+        }
+
+        /* Estil per a seccions parells (color alternat) */
+        section:nth-child(even) {
+            background-color: #cae6ff; /* Color alternat diferent */
+        }
+         /* Estils per als enllaços */
+        a {
+            color: inherit; /* Hereta el color del text del seu element pare */
+            text-decoration: none; /* Elimina el subratllat dels enllaços */
+            transition: color 0.2s ease; /* Animació de canvi de color en 0.2 segons */
+        }
+
+        /* Estil quan es passa el cursor sobre l'enllaç */
+        a:hover {
+        color: #ff6600; /* Canvia el color quan es passa el cursor */
+        }
+
+        .contenidor-pernoctar {
+            display: flex;
+            flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+            gap: 5px; /* Espai entre les imatges */
+            justify-content: space-between; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            float: center;
+            margin-right: 20px; 
+            margin-left: 20px;
+        }
+         
+         .contenidor-pernoctar img { 
+             width: 300px; /* Amplada de la imatge */
+             height: 300px; /* Alçada de la imatge */
+             object-fit: cover; /* Manté la proporció de la imatge */
+             border-radius: 50%; /* Fa que la imatge sigui rodona (opcional) */
+             margin-right: 50px;
+             margin-left: 50px;
+             margin-bottom: 10px;
+             min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
+         } 
+
+         .contenidor-galeria {
+            display: flex;
+            flex-wrap: wrap; /* Permet que les imatges es distribueixin en múltiples línies */
+            gap: 5px; /* Espai entre les imatges */
+            justify-content: space-between; /* Centrem horitzontalment el contingut */
+            align-items: center; /* Centrem verticalment el contingut */
+            float: center;
+            margin-right: 20px; 
+            margin-left: 20px;
+        }
+         
+         .contenidor-galeria img { 
+             width: 300px; /* Amplada de la imatge */
+             height: 300px; /* Alçada de la imatge */
+             object-fit: cover; /* Manté la proporció de la imatge */
+             margin-right: 50px;
+             margin-left: 50px;
+             margin-bottom: 10px;
+             min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
+         } 
+
+         /* Estils per al botó de scroll-up */
+         .icona-scroll {
+             position: fixed;
+             top: 20px; /* Distància desitjada des del top */
+             right: 0; /* Distància desitjada a la dreta */
+             width: 40px;
+             height: auto;
+             transition: bottom 0.3s ease; /* Transició suau del moviment */
+             cursor: pointer;
+             transform: scaleX(-1); /* Gira horitzontalment la imatge */
+        }
+        
+    </style>-->
+</head>
+<body>
+    <h1>Senderisme amb pernocta</h1>
+    <div class="contenidor-sortidesetiqueta">
+        <a href=#vinyemal>
+            <img src="2023/2023_07_vinyemal/vinyemal cercle.png" alt="foto de grup des del refugi d'Oulettes ">
+            <footer>Vinyemal</footer>
+        </a>
+        <a href=#perdido>
+            <img src="2023/2023_09_perdido/perdido cercle.png" alt="dibuix del Perdido">
+            <footer>Monte Perdido</footer>
+        </a>
+        <a href=#montserrat>
+            <img src="2023/2023_10_vivacmontserrat/vivac temporal cercle.png" alt="dibuix del vivac">
+            <footer>Vivac a Montserrat</footer>
+        </a>
+        <a href=#balandrau>
+            <img src="2023/2023_10_balandrau/balandrau cercle.png" alt="dibuix del Balandrau">
+            <footer>Balandrau per la directa</footer>
+        </a>
+        <a href=#castanyada>
+            <img src="2023/2023_11_castanyada/castanyada cercle.png" alt="dibuix de la castanyada">
+            <footer>Dormint a una esglèsia</footer>
+        </a>
+    </div>
+    <section id="intro">
+        <p>Bones!</p>
+        <p>Heu fet mai una llista de desitjos? O una llista de coses que us agradaria fer però que encara no heu fet? Això mateix és el que vaig fer fa cosa de mig any. Mai havia dormit en un refugi lliure, feia anys que no feia vivac... M’estava malacostumant a anar amb la furgo i ja no pensava que podia carregar pes per fer varis dies de muntanya amb sac i màrfega. </p>
+        <p>Aquí us deixo les sortides estivals (no sé si és aquesta la definició però per mi estival és que no hi ha neu) que hem fet:</p>
+    </section>
+    <section id="vinyemal">
+        <h2>Vingemal, 3.298 m</h2>
+        <p>El meu primer 3000m!</p>
+        <p>Amb moltes ganes de començar l’estiu, presento el TFM a mitjans de juliol, i el dijous següent posem rumb a Pont d’Espanya, em salto la cloenda del màster però no em sap gens de greu. Fa unes setmanes en Charlie ens va dir per fer una ruta pels Ibones 3.000, cosa que va quedar eclipsada en veure la planta del Vinyemal. Així és com es va decidir fer el Vinyemal. Primer ens vam plantejar fer-lo des de Bujaruelo, fent-la circular. Però després d’informar-nos, parlar amb gent que l’havia fet i demés, vam considerar que la millor opció era fer-ho des de Pont d’Espanya en 3 dies.</p>
+        <p>És la meva primera sortida carregant tenda en molt de temps. L’última vegada va ser fent el Camino de Santiago amb les amigues del BIYSC, back to 2018 UAU. No només hi ha l’afegit de la tenda, també serà el meu primer 3.000, i la primera glacera que trepitjo. Juntament amb primer cop que faig servir piolet i grampons! </p>
+        <p><b>Preparada per tota una aventura! </b></p>
+        <ul>
+            <li>Època: estival. Mitjans de juliol.</li>
+            <li>Dates: 21-23 de juliol 2023. </li>
+            <li>Dividim la ruta en 3 dies.</li>
+        </ul>
+        <p><b>Dia 0:</b> Conducció. Comença fatal el dia, tinc la roda de la furgo petada, sembla que l’hagin rajat de fet. Fem reorganització de cotxes i sortim cap a les 6 de la tarda. Dormim passada la frontera, ja a França, a un pàrquing amb les tendes i la furgo del Navarrete, on tinc el privilegi de dormir. Al matí veiem un cartell que diu prohibit acampar. Comencem bé per segona vegada.</p>
+        <p><b>Dia 1:</b> Aparquem a Pont d’Espagne (1.490 m), i ens enfilem direcció Refugi de Baysellance (2.651 m) amb 15 kg a l’esquena. </p>
+        <ul>
+            <li>Punt de partida: Pont d’Espagne (1.490 m).</li>
+            <li>Punt d'arribada: Refugi de Baysellance (2.651 m).</li>
+            <li>Km i desnivell: 13 Km i 1.300 m de desnivell positiu.</li>
+            <li>Track de referència: <a href="https://fr.wikiloc.com/itineraires-alpinisme/pont-despagne-a-refugio-bayssellance-1-30142243"><u>Wikiloc</u></a></li>
+        </ul>
+        <p>L’Arnau i jo ens mirem amb cara d’espantats - com pot ser que ens hàgim deixat enredar? Però si això pesa molt! - ens dèiem. Que il·lusos, això feia només que començar, i gràcies a aquesta travessa n’hem fet moltes altres després. Però era inevitable sentir-nos els petits del grup, és que ho érem, com si anéssim amb els nostres cosins grans d’excursió i no tinguéssim molt clar on ens portaven. En aquests moments ens passa o passava que acabàvem dient, no passa res per no tenir res clar, si els nostres amics que ens treuen 5-7 anys no saben què volen ser de grans, nosaltres encara tenim temps per fer i desfer. Jo en aquell moment em trobava que just havia entregat el màster i no tenia ni idea del que volia fer després, tenia una oferta de feina on encara no havia aplicat, i on tenia grans possibilitats d’entrar, però no sabia si ho volia. Deixant enrere els nostres pensaments, fent-nos fotos amb el que semblaven fòssils d’arrels, ens trobem amb el <b>Llac Gaube</b>, el qual passem per la dreta. Fins aquí és un camí concorregut. Deixem els turistes enrere i continuem enfilant fins a arribar al <b>Refugi des Oulettes de Gaube</b>. El deixem enrere, ni ens aturem a prendre una Coca-Cola. De fet, en Charlie ens està posant el turbo, està preocupat per l’hora que arribarem al refugi, només se’ns permet fer una parada per menjar l’entrepà i les altres parades són per esperar-nos mútuament, beure aigua i poc més. </p>
+        <p>Tampoc tenim molts motius per parar i embadalir-nos de les vistes i és que hauríem disfrutat un munt de les vistes, però hem tingut núvols baixos humits que ens han abraçat durant la gran part del camí. No és fins passat el refugi d’Oulettes que deixem els núvols per sota nostre i és aleshores quan veiem les tremendes parets que ens envolten. És curiós l’efecte que fan els núvols, et priven de la dimensionalitat i la sensació és de tenir les parets de les muntanyes molt a prop, d’estar molt encaixonats. És aleshores que veiem per primera vegada el cim del Vinyemale. Poc després ens ve una pujada, el <b>coll de Hourquette d´Ossoue</b>, l’última pujada del dia, al saber que ben a prop està el refugi sembla que ens costi menys de fer-la. Des del coll avistem per primera vegada el refugi, des d’on estem es veu una caseta petitona en mig d’una esplanada envoltada de muntanyes. Ara ens toca baixar.</p>
+        <p>Arribem al <b>refugi de Baysellance</b>, el refugi guardat més alt del Pirineu, construït el 1899! Arribem a les 6.30 pm, trobem un lloc estupendu per plantar la tenda (les tendes), i ja ens criden per sopar. Quan vam trucar per reservar sopar ens van dir que faltaven pocs dies perquè vingués l’helicòpter, que tenien poc menjar, que si no ens podíem emportar el menjar de casa HAHA. En conseqüència, el menjar no va ser el punt clau d’aquell cap de setmana, però ens van alimentar. Recordarem per molt de temps el formatge casolà.</p>
+        <p>La nit és freda i humida, ens plou molt, però jo dormo perfectament bé, no hi ha res com cansar-se per dormir com un tronc sota la protecció de la tenda. Tot i anar amb un sac de 0º, que m’ha deixat el senyor de Travessa, passo una mica de fred. Em començo a plantejar que necessitaré un sac per sota dels 0 graus.</p>      
+        <p><b>Dia 2:</b> Sortim del refugi de Baysellance a 2.600 m, creuem la glacera el Vinyemal, grimpem esquivant pedres. Coronem el cim més alt del Pirineu Francès, la Vignemale 3.298 m, fem part de la cresta, alguns de nosaltres 2 cims més, d’altres fins a 4 cims més, i tornem per la glacera cap al refugi.</p>
+        <ul>
+            <li>Punt de partida i arribada: Refugi de Baysellance (2.651 m).</li>
+            <li>Km i desnivell: uns 10 Km i 1.000 m de desnivell tant positiu com negatiu.</li>
+            <li>Track de referència: <a href="https://ca.wikiloc.com/rutes-alpinisme/vignemale-pique-longue-montferrat-5056215"><u>Wikiloc</u></a></li>
+        </ul>
+        <p>Ens despertem d’horeta, fa fresca i no volem sortir de la tenda, però és el que toca. Esmorzem, ens preparem, i sortim més tard del que volíem del refugi, havent deixat les tendes plegades a les guixetes.</p>
+        <p>La motxilla pesa menys, però el camí és dur, roca clara i rugosa, sembla que la roca tingui esgarrapades. Fem via pel cantó Aragonès, les roques que trepitgem ens indiquen la seva història, damunt d’elles durant molt de temps va haver-hi una glacera. Arribem a la <b>glacera d'Ossoue</b>, també coneguda com la glacera del Vinyemal, la 2a més gran del Pirineu. Primera vegada que em poso grampons! Primera vegada que trepitjo una glacera! Vaig agafant els truquitos, caminar amb els peus una mica separats, el piolet a una mà, i a l’altre el pal per caminar.</p>
+        <p>Déu-n'hi-do, a l'acabar la glacera i haver-nos de treure els grampons, casi sóc víctima d’una partida de bolos. Un senyor no sé com cau de cul, amb pantalons curts, grampons posats i cames enlaires que passen ben a prop de mi, i jo penso ai que se’m emporta per davant.</p>
+        <p>Arribats al punt on s’acaba la glacera ens traiem els grampons i evitant la riuada de gent i les seves pedretes anem pujant. Veiem coses curioses, com una família que va encordada sense cap seguro a la roca, com els nens i nenes de pàrvuls quan surten al carrer, una corda que els uneix.</p>
+        <p>Coronem el cim més alt del Pirineu Francès, El Vinyemal, La Vingemale, La Gran Vinyemale, <b>Le Pic Longue</b>3.298 m, com li vulguis dir. Al cim fem una pausa per agafar forces i tirem cap a la cresta direcció Clot de la Hunt (3.289 m), són prou trambòlics els passos que hem de fer per arribar, això se li suma que cauen pedretes i que no tots tenim la mateixa experiència. Jo estreno sabates de muntanya i el grup que tinc és fantàstic. És curiós com en algun punt em sentia ben lliure asseguda com si anés a cavall sobre una pedra amb un bon pati a sota meu, i, en canvi, en altres moments on estava grimpant o desgrimpant em sentia desprotegida totalment i patint per la meva vida per si me n'anava tartera avall.</p>
+        <p>Un cop arribat al pic <b>Clot de la Hunt</b>, els altres són més fàcils de coronar, aquest cas és més carena que cresta. Arribem al <b>pic Cerbillona</b> (3.247 m), i poc després al <b>pic Centrale</b> (3.235 m), jo em trobo regulinxi, i amb la Laura i el Jou decidim començar a baixar. Quina alegria, no només faig el meu primer 3.000 m, sinó que en fem quatre.</p>
+        <p>Super curiós, però en Jou en veritat es diu Josep Ollé, i això el converteix en Jou Ollé. M’encanta. </p>
+        <p>Creuant la glacera em flipen els colors del gel, ara blanc, ara blau cel, ara amb pedres, ara un rierol, m'imagino les grans glaceres dels Alps o de la Patagonia i penso que m'hi agradaria anar. Acabem de creuar la glacera, ens traiem els grampons i just escoltem unes personetes que ens saluden i poc després arriben cap a nosaltres. Són els nostres amics! Ens animem  atornar-nos a posar els grampons i baixar una pala de neu com si esquiéssim. Recordem que és la meva primera vegada amb grampons i piolet, jo vaig feliç saltant i clavant peus, sense ser conscient que una mala clavada em faria mal. Em sento molt plena i satisfeta, em diuen que ge fet el meu bateig a l'alpinisme.</p>
+        <p>Arribem al refugi, avui hi ha més gent, ens costa més trobar lloc on plantar la tenda. El sopar d’avui és el mateix que el d’ahir. I repetim de formatge.</p>
+        <p><b>Dia 3:</b> Sortim del refugi de Baysellance fins a Pont d’Espagne. Avui fa molt bon dia, i podem veure les vistes que no vam veure el dia 1.</p>
+        <ul>
+            <li>Punt de partida: Refugi de Baysellance (2.651 m).</li>
+            <li>Punt d'arribada: Pont d'Espagne (1.490 m).</li>
+            <li>Km i desnivell: 13 Km i 1.300 m de desnivell negatiu.</li>
+            <li>Track de referència: el mateix que el dia 1.</li>
+        </ul>
+        <p>Fa un dia espectacular, a mitjanit ens hem despertat i hem vist el cel brillant, i algun estel fugaç i tot. Al matí fa fred, per descomptat, i fem mandrusquis dins la tenda amb tot recollit. Anem baixant i ens embadalim a cada passa, era la primera vegada que veiem aquell paisatge, tot i fer el mateix camí que feia dos dies. </p>
+        <p>Arribem al llac de Gaube petats, estem fregits, i cada vegada hi ha més gent que ve d’excursió de dia. Decidim que ens mereixem un bon bany, i uns amb més dificultats que altres entrem al llac alpí d’origen glacial. Com ens costa, però com ens agrada banyar-nos en aquests llocs. Flotant a l’aigua veiem tota la vall, els colors verds, el cel blau, veiem d’on venim i ens flipa que faci només unes hores estiguéssim allà. </p>
+        <p>Sortim de l’aigua, mengem, ens assequem, i ens tornem a posar en marxa. De baixada comencem a olorar desodorants i perfums, cosa que havíem abandonat feia 3 dies. </p>
+        <p>Per fi arribem al cotxe, però abans de començar a marxar, rebo una picada de tabac, que recordo que em va molestar unes setmanes. No recordo gens el camí de tornada en cotxe, i cuidado que eren 6 h.</p>
+        <p>Ha sigut una experiència increïble. Estic escrivint aquesta entrada un any i mig més tard i encara me n'enrecordo com si fos ahir. Això diu molt. I gràcies a aquesta experiència, he fet molt més després. Al setembre del mateix any vam anar a fer el Monteperdido. El següent estiu (per tant, el passat) una travessa de quatre dies amb tenda… Ja us dic, aquest va ser el detonant.</p>
+        <div class="contenidor-galeria"> 
+           <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDM4NDM1NTQyNTQwMTM2?story_media_id=3151088094962296540_239644448&igsh=MXdmd3AyczN4aGV2">
+               <img src="vignemaleportada.jpg" alt="vignemale">
+               <footer><span style="color: #245777;">Veure ressenya amb fotos<span></span></footer>
+           </a>
+       </div>
+    </section>
+    <section id="perdido">
+        <h2>Monte Perdido, 3.355m</h2>
+        <p>I nosaltres perduts. Primer cop trucant al 112. És la meva 2a ruta fent 3.000m.</p>
+        <ul>
+            <li>Època: principis de tardor, cap de setmana de La Mercè, 2023.</li>
+            <li>Dificultat: no és un passeig.</li>
+            <li>Material específic: el just i necessari per pernoctar.</li>
+            <li>Ruta circular, dos dies. Dormim al refugi lliure de <a href="https://www.walkaholic.me/es/refugio/espana/aragon/huesca/232-refugio-de-tucarroya"><u>Tucarroya</u></a>.</li>
+            <li>Zona: Parc Naacional de Ordesa y Monte Perdido, Aragó</li>
+            <li>Punt de sortida: Valle de Pineta, al pàrquing <a href="https://g.co/kgs/U9QrwWn"><u>Pradera de Pineta</u></a>.</li>
+            <li>Track de referència del 1r dia, de Pineta al refugi de Tucarroya: <a href="https://www.wikiloc.com/hiking-trails/refugio-de-tucarroya-2-666-m-desde-pineta-20160999"><u>Wikiloc</u></a>.</li>
+            <li>Track de referència del 2n dia, refugi de Tucarroya - Monte Perdido - Punta de las Olas - Collado de Añisclo: <a href="https://www.wikiloc.com/mountaineering-trails/circular-a-monte-perdido-pico-anisclo-baudrimont-se-y-punta-de-las-olas-desde-pineta-pirineo-salvaj-144215073"><u>Wikiloc</u></a>.</li>
+        </ul>
+        <p>Qui som? La Cris, la Laia, en Grygus, en Callum, en Guillem i jo. Redactemn en Guillem i jo.</p>
+        <p>Ruta de dos dies.</p>
+        <p><b>Descripció:</b> Inici Pineta, fins al refugi lliure de Tucarroya, passant pel balcó de Pineta i ibon de Marboré. De Tucarroya fent el coll de Cilindro, creuant la glacera del Monte Perdido, la Escupidera, Pic del Monte Perdido, baixant pel collado del xx per la cara SE, Pico Punta de las Olas, i baixant per la tartera xx i finalment pel collado de Añisclo.</p>
+        <p><b>23 de setembre, La Mercè.</b></p>
+        <p>Ens trobem al parking de Pineta. Acabem de fer motxilles, l’objectiu d’avui és arribar al <b>refugi lliure de Tucarroya</b>, el refu lliure més alt i més antic del Pirineu. És domini francès. Avui no tenim pressa, però ens convé arribar el més d’hora possible perquè correm risc de no tenir lloc. Sabem que hi ha 12 places, suposem que dormirem apretadets, i sobrepassant la capacitat del refugi.</p>
+        <p>Fem camí, comentant la jugada, travessem el fons de la vall, deixem enrere el bosc, veiem el <b>balcón de Pineta</b> des de baix, i la cascada, la impressionant cascada. Des de dalt quedem entusiasmats per les formes de les roques i les vistes a la vall profunda. Veiem abrics de bivac. Veiem la glacera del Monte Perdido. Ara ens toca anar cap al <b>Ibón de Marboré</b>, fem una planícia i aprofitem per fer fotos i omplir aigües, és l’últim punt per agafar aigua abans del refugi.</p>
+        <p>Abans d’arribar al refugi ens avança un grup i patim per les places al refugi. Però la Laia corre i ens reserva un trosset de llit. El refugi queda just a una brecha que fa difícil el seu accés. A la vegada té una planta ben maca, a destacar les caques congelades!</p>
+        <p>Sopem com bons germans compartint fogonet, juguem al parxís de 6, i bevem ratafia. Comencem a muntar el llit, ens adonem que on volíem dormir 4 no estava pensat dormir-hi més de 2. El refugi es va omplint i cada cop hi ha més gent a la sala del menjador, molta gent dormint al terra amb màrfegues.  Abans de quedar-nos dormits escoltem i olorem com algú es fa sopeta al pis de sota de la llitera. I durant la nit ens despertem varies vegades per roncs d’altres. </p>
+        <p><b>24 de setembre</b></p>
+        <p>Ens despertem a les 4.30am, amb l’objectiu de sortir a les 5.00am, fa molt fred, fem algunes galetes abans de sortir i ens ve per davant 2h de frontal, on creuem la plana del ibón de Marboré. Un cop a creuada la vall, comencem a pujar, tenim grimpades amb passos de II a la llum de frontal. Les fotos xulíssimes i la sensació de xemeneia també.</p>
+        <p>Arribem a la glacera del Monte Perdido (sense neu) on fem una innecessàriament llarga pausa per esmorzar, que si cafetó, te, galetetes... Ja ens toca el sol i anem desincronitzats. </p>
+        <p>Reprenem la marxa, i comencem a fer el <b>collado del Cilindro</b>, aquí hi ha terreny mixt, neu i pedra. En passar a l’altra banda veiem el refugi de Góriz i ens encaminem cap allà, també veiem la cola de caballo. Passem el coll i enganxem el camí per pujar per la <b>Escupidera</b>. Punt negre del pirineu. Em fa força respecte l’Escupidera, però vaig parlant amb el Guillem i em dona consejitos per com fer les passes, també és terreny mixt, neu i pedra.</p>
+        <p>Superada, s’arriba a un altiplà abans de fer cim. Fem cim a les 12 del migdia, fa molt bon dia, veiem fins i tot la Pica d’Estats. Veiem també el Vinyemal, fa especial il·lusió perquè l’havia fet feia 2 mesos.</p>
+        <p>Comencem a baixar, encaminem cap a la Punta de las Olas, ens trobem a una parella amb uns gossos que ploren molt i ens espanten, ens toca baixar el coll per un nevero + tartera, rellisquem una miqueta però es fa. D’aquí hem de flanquejar fins a la Punta de las Olas, vam haver de mirar Fatmap per saber per on anar, la vista en 3D ens va ajudar. La <b>Punta de las Olas</b> és un 3.000m que ve de pas, no ens hem desviat gens per fer-lo, encara toca baixar més de 1.800m de desnivell. Per fer-ho, una <b>tartera</b> que posa a prova la meva força mental i la resistència de les meves botes de muntanya. Pel Guillem, la millor tartera que ha fet mai. </p>
+        <p>Després de la tartera, una mica més de flanqueig i arribem al <b>collado de Añisclo</b>, ara ja només queden 1.000m de desnivell fins al refugi de Pineta, però són les 7pm i sabem des que hem fet cim que arribarem de nit al cotxe. El que no sabem encara és que haurem de trucar al 112 i vindrà la guardia civil a buscar a un dels nostres. Semblava molt dramàtic el moment que va passar, però després s’ha explicat amb gràcia i en conservem un bon record. Finalment fem nit al <b>refugi de Pineta</b>, cosa que no contemplàvem i el dia següent ja anem a casa.</p>
+        <p>D’aquesta sortida se n’han après vàries coses, la primer i més important, cal saber quan trucar al 112. I mai ningú es queda sol. La segona i més repetida a posteriori, quan es fa alta muntanya s’han de seguir uns protocols militars com cagar i desvestir-se sincronitzadament. La tercera i que sempre me n'oblido, necessaris els taps per dormir.</p>
+        <div class="contenidor-galeria"> 
+           <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTk1NzkxNjA1MDQwMDU4?story_media_id=3199820138000942139_239644448&igsh=MXJrdDcxN2dzMXZqZA==">
+               <img src="IMG_20230924_065144.jpg" alt="a la llum dels frontals">
+               <footer><span style="color: #245777;">Veure ressenya amb fotos<span></span></footer>
+           </a>
+       </div>
+    </section>
+    <section id="montserrat">
+        <h2>Vivac a Montserrat</h2>
+        <p>Jugant dins la bauma a l'UNO amb casc</p>
+        <ul>
+            <li>Època: principis de tardor, primer cap de setmana d'octubre, 2023.</li>
+            <li>Dificultat: grimpades i ràpels.</li>
+            <li>Material específic: per fer barrancs secs i per pernoctar.</li>
+            <li>Ruta circular, dos dies. Dormim a la Bauma de les Pruneres, capacitat per unes 10 persones.</li>
+            <li>Qui som: Guillem, Roser, Gemma filòloga, Orenguix, Pol Bori, Sara Mates, Carmen del màster!, NatiNat del màster!, Josefina del IRB, i jo.</li>
+            <li>Zona: Montserrat.</li>
+            <li>Punt de sortida: Monestir de Santa Cecília, al <a href="https://maps.app.goo.gl/1Q25KhaH6akFWH5f7"><u>pàrquing</u></a>.</li>
+            <li>Track de referència del 1r dia, per pujar el Montgròs des de Santa Cecília: <a href="https://es.wikiloc.com/rutas-senderismo/montgros-por-santa-cecilia-en-montserrat-45251964"><u>Wikiloc</u></a>.</li>
+            <li>Track de referència del 2n dia, per la canal: <a href="https://www.rocjumper.com/camino-equipado/canal-mejillon-pou-glac-montserrat/"><u>RocJumper</u></a>.</li>
+        </ul>
+        <p>Esprement al màxim el meu temps com a nini, últim cap de setmana abans de començar a treballar en una feina fix i contracte indefinit, una feina d’oficina de 8 a 5. A veure com anirà aquesta nova etapa.</p>
+        <p>Aquest cop complint el somni de dormir en una cova, altra vegada, gràcies, Guillem. És curiós, ens coneixem de fa tan sols un mes, hem fet 4 matinals entre setmana, una gran travessa, i ja t’has convertit en una persona de gran estima.</p>
+        <p>Esprement tant el temps que havia quedat per fer una paella el dissabte per dinar i per berenar me n'anava a Montserrat a veure la posta de sol. </p>
+        <p>Quedem al Monestir de Santa Cecília, i tenim l’objectiu de pujar el Montgròs abans que es pongui el sol. Però això no passa, arribem al capdamunt del Montgròs amb frontals ja. I en comptes de sopar allà dalt decidim que és més sensat anar a la bauma que havíem triat per dormir a sopar.</p>
+        <p>Com que estic escrivint la ressenya 1 any i mig més tard tinc pocs records de com va ser l’excursió en si, però sí que recordo la bauma i la poca aigua.</p>
+        <p>És la <b>Bauma de les Pruneres</b>, hi cabem tots estirats, és una cova molt sorrosa, vam quedar tots ben marronosos-rogencs. Guardo al cap gravada una imatge molt maca d’aquesta sortida i és la de la Sara, el Pol i demés jugant a l’UNO dins la bauma sobre les màrfegues amb els cascos posats. I és que durant la sortida no havíem tingut cap problema amb les pedres montserratines, però a la cova va haver-hi més d’un cop de cap amb el sostre.</p>
+        <p>El sopar va ser molt agradable, jo menjava una truita, i el Guillem portava licors i xocolata. A mitja nit la màrfega del Guillem estava desinflada, i ell amb la llum del frontal vermella estava bufant per inflar-la, a mi em va semblar aquell quadre de Goya menjant-se un nadó. El dia següent no va haver tesito, no estem acostumats a dormir en llocs sense punts d’aigua a prop, i ho vam patir diumenge.</p>
+        <p>Diumenge ens vam separar, uns vam pujar a Sant Jeroni, i d’allà l’Arnau i jo vam baixar per la Canal de mejillón. </p>
+        <p>Molt divertida, i molt divertida (però poc ecològica) la història de per què es diu així. I és que allà dalt a Sant Jeroni hi havia un restaurant, especialitzat en musclos potser, com que l’accés a Sant Jeroni no és per carretera, la millor manera de desfer-se de les closques dels musclos era llençar-ho per la finestra. Jo m’imagino els comensals llençant-ho per la seva finestra. Però suposo que el que feien era llençar-ho des de la cuina els cuiners. Així és com aquell racó de Montserrat va tornar a estar en contacte amb animals marins, i és que tot el primer tram de la canal està cobert de closques de musclos. No és llegenda.</p>
+        <p>La baixada com dic, prou divertida, ens vam trobar un home pujant i ens va dir que ell de jove havia pujat per aquí sense problemes, però que ara després de tant de temps li costava, anava sense casc, sense motxilla, i amb vambes de carrer. Segur que estava molt fort de jove, perquè havia mantingut part de la força encara ara a l’edat que tenia per remuntar aquesta canal. Nosaltres de baixada vam anar enllaçant tots els ràpels, llocs on es podria haver baixat per cadenes, veiem un forat per passar la corda i anàvem cap avall. Vam fer com 12-13 ràpels, això sí, vam trigar més del que pensàvem.</p>
+    </section>
+    <section id="balandrau">
+        <h2>Balandrau, 2.585 m, a pocs passos de congelació</h2>
+        <p><b>Balandrau per la via directa, fem nit a Coma de Vaca.</b> Bivac a mitjans d'octubre sense un sac d'hivern no és bona idea. Fer bivac en un lloc amb pendent, tampoc.</p>
+        <ul>
+            <li>Època: tardor, principis d'octubre 2023.</li>
+            <li>Dificultat: grimpadetes.</li>
+            <li>Material específic: el just i necessari per pernoctar.</li>
+            <li>Ruta circular, dos dies. Dormim a prop del refugi guardat de <a href="https://www.comadevaca.cat/index.php/ca"><u>Coma de Vaca</u></a>.</li>
+            <li>Zona: Puigmal, Vall de Núria, Vallter.</li>
+            <li>Punt de sortida: Central Elèctrica de Daió, al pàrquing <a href="https://www.google.es/maps/place/Central+El%C3%A8ctrica+de+Dai%C3%B3+%7C+Queralbs/@42.3565972,2.1710145,17z/data=!4m6!3m5!1s0x12a542d01025efe5:0xac8de4980ca46aaf!8m2!3d42.3643068!4d2.1749483!16s%2Fg%2F11g8w947w6?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"><u> Pont de Daió</u></a>.</li>
+            <li>Km i desnivell: Uns 14 Km i 1.300 m de desnivell entre tots dos dies.</li>
+            <li>Track de referència: <a href="https://es.wikiloc.com/rutas-alpinismo/balandrau-por-la-directa-10737126"><u>Wikiloc</u></a>.</li>
+        </ul>
+        <p>Qui som? El Guillem, l'Anna Trenchs (per primera vegada!), el Guillem de Badalona, la Sandra Peris, l'Àlex amic del Guillem i el David cosí del Guillem.</p>
+        <p>Ruta de dos dies, es podria fer en un dia perquè no és tan llarg, però volíem fer bivac.</p>
+        <p>Aparquem a Pont de Daió, l’objectiu d’avui és fer el Balandrau per la via directa. No és un camí molt concorregut, ens agrada això de fer cims per vies alternatives així no ens trobem gent i ens sentim més aventurers, és una manera de fer cims populars sense la gent, o tornar-los a fer sense repetir ruta. Per conseqüència és un camí poc trepitjat, feréstec. Anem amb les màrfegues per fora de la motxilla i hem d’anar amb compte per no enganxar-nos amb branques. Un cop arribem a la canal directa ja no hem de saltar arbres sinó rocs. Trobem blocs de pedra que s’han de grimpar, alguns no són obviïs com superar-los. Anem fent, fa caloreta. Fins que arribem al final de la canal i ens trobem amb l’últim tram de desnivell fins al cim, aquest tros ja no és grimpada. Des de dalt del cim tenim una molt bona panoràmica, ens sorprèn com està de sec tot, la vegetació és marró-groga. Dinem, i comencem a baixar cap a Coma de Vaca. Veiem uns cabirols corrent i saltant que s’allunyen de nosaltres.</p>
+        <p>Mentre baixem cap al refugi anem pensant on podrem dormir, veiem una cabana i diem de dormir-hi a prop. Deixem les coses i anem a buscar un Aquarius al refugi. Amb la beguda a la mà anem a un punt més elevat per veure la posta de sol. Quin privilegi tenim per poder fer això.</p>
+        <p>Tornem al nostre campament i sopem, jo em vaig endur un cuscús d’aquells deshidratats del Decathlon que no em va agradar gens i ara encara guardo un sobret d’aquests a casa, ves a saber si ja ha caducat. Deixem les coses a prop nostre, però no on tocava. I és que tot i estar molt apropet els uns dels altres i tenir bons sacs, tenim fred. Pensem amb la cabana que tenim relativament a prop, però ningú vol sortir del sac i anar cap allà. Pensem també amb el desastre de Balandrau aquella nit de Cap d'Any i no ens estranya que morissin tantes persones si sense neu ja fa fred aquí. Tinc molt fred als peus i començo a tenir la sensació que la humitat s’ha colat dins el sac. No només el fred fa complicada la nit, també la meva por que una vaca s’assegui damunt meu, que em llepi la cara, o pitjor encara, que se m’hi cagui a sobre. Quan obria els ulls per haver-me desvetllat aprofitava i em posava les ulleres per veure l’espectacle que tenia damunt meu, i a mesura que passaven les hores, la lluna canviava de posició. </p>
+        <p>Quan ens sona l’alarma del mòbil encara no ens toca el sol i intentem sortir del sac però ens costa. És quan m'adono que durant la nit he anat caient fora la màrfega, i és que estàvem en pendent i no tenia res per aturar el meu pes, per tant, tenia part del sac en contacte directe amb l’herba. I no només això, havia gebrat, tot estava cobert de rosada. Les sabates les havíem deixat fora la motxilla, i en posar-nos-les per marxar se'ns congelaven els dits dels peus. Quan ens quedava per aprendre! Però mira, són dues coses que ara ja faig bé. Una és posar la motxilla sota els peus per no sortir de la màrfega i l’altra és posar les sabates dins la motxilla.</p>
+        <p>Al matí ens vam fer un tesito per entrar en calor i començar a baixar. La baixada la vam fer pel GR11 que porta al refugi, així que no ens va caldre track, era seguir les marques.</p>
+        <p>A l'arribar a Barcelona vaig anar directa al cumple de la Clàudia i encara vaig tenir temps de menjar entrepans de nocilla i pastís.</p>
+        <p>Va ser un bon cap de setmana de cohesió de grup, vam conèixer a l’Anna i vam aprendre hacks per fer bivac més còmodament. Amb això feia un check a llista de coses que tenia pendents: fer bivac al Pirineu. I com no, havia sigut de la mà del Guillem.</p>
+        <div class="contenidor-galeria"> 
+           <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODk3MTA2NTEzMTUyNzI2?story_media_id=3209264362828453458_239644448&igsh=Y3Q4cnJxZm50dGRt">
+               <img src="balandrauportada.jpg" alt="coma de vaca">
+               <footer><span style="color: #245777;">Veure ressenya amb fotos<span></span></footer>
+           </a>
+       </div>
+    </section>
+    <section id="castanyada">
+        <h2>Alta Garrotxa</h2>
+        <p>Una nit de terror.</p>
+        <ul>
+            <li>Època: tardor, Tots Sants 2023.</li>
+            <li>Dificultat: fàcil.</li>
+            <li>Material específic: el just i necessari per pernoctar.</li>
+            <li>Ruta circular, dos dies. Dormim a l'església <a href="https://maps.app.goo.gl/FjmPuTXy7cnpYgDn6"><u>de Santa Maria d'Escales</u></a>.</li>
+            <li>Zona: Alta Garrotxa.</li>
+            <li>Punt de sortida: el poble d'Oix <a href="https://maps.app.goo.gl/R9hDusK7roy9FKBe9"><u>al pàrking del poble</u></a>.</li>
+            <li>Km i desnivell: 17 Km i 940 m de desnvivell en total.</li>
+            <li>Ressenya de referència: <a href="https://elbuscaracons.blogspot.com/2018/04/ferran-alta-garrotxa-oix-escales-talaixa-vaquer-liberals-samso-bassa-terres.html?m=1"><u>Wikiloc</u></a>.</li>
+        </ul>
+        <p>En veritat la idea no era aquesta, però vam acabar anant a la Garrotxa perquè ens quedava més a prop, només disposàvem d’un dia, 1 de novembre de 2023, vam sortir després de la feina. I així vam fer una cosa que no pensàvem pas que necessitàvem: dormir a una església en desús. Guixo de la meva llista de pendents: dormir en un edifici en desús, o dormir en una església.</p>
+        <p>Comencem tard a caminar, ja amb els frontals. És la nit de Tots Sants i hem dit que està prohibit explicar històries de por. No recordo moltíssim el camí, però en un moment donat arribem a l'Església on dormim, ens instal·lem, sopem, compartim panellets, xocolata i licors. Fem una mica d’inspecció de la zona i veiem que al pis de dalt hi ha una caseta. També podríem dormir aquí dalt, però ens fa més mal rollo. Sembla que hagués estat habitada no fa tant de temps, l’espai és més petit, però té taula, xemeneia, jocs de taula antics, espelmes, paelles, olles i alguna cosa més. </p>
+        <p>El Xulián ens explica que ha anat al mercat de Sants a comprar i que una botiguera li ha explicat com fer panellets, que havia quedat molt sorpresa en assabentar-se que el noi que li parlava català era asturianu i no havia menjat mai panellets. El Guillem portava castanyes per fer a la paella, però vam acabar descartant l’opció.</p>
+        <p>Un cop ens posem a dormir, escoltem unes passes, i ens caguem. Al principi pensem que és un grupet com nosaltres que arriba tard a trobar lloc per dormir, després que és una persona sola, d’aquí ens imaginem des de l’home apartat de la societat que viu al pis de dalt a l’home boig que ve amb una escopeta. Per sort, es tracta d’un ase. Li hem ocupat el seu habitacle, i ve a recuperar-lo. Obre la porta amb una cosa i ens olora les motxilles, ens espantem força i el fem fora. Decidim bloquejar la porta perquè no entri i ens deixi tranquils. Però el resultat és un altre, està determinat a entrar i no para de colpejar la porta. Sembla realment que sigui una persona que truqui a la porta, però de tant en tant brama, sembla que pari i després torna. No ens deixa descansar gaire, però no volem obrir la porta. Al matí quan ens sent que fem soroll s’esvera més, i no sabem com fer-ho per sortir de l'església sense endur-nos una patacada per part seva. Per sort, obrim la porta i entra ben tranquil com qui no vol la cosa, com si no hagués estat tota la nit turmentant-nos. No sé per què, però recordo que durant la nit dèiem o crèiem que era una cabra, i d’aquí van sortir moltes teories, sobre el diable i el fet que estiguéssim dormint a una església.</p>
+        <p>L’endemà passem per un Mas que sembla una casa de colònies i descansem una micona al prat, no per l’activitat física feta, sinó per les poques hores de son que hem fet. Coronem el cim del Ferran, i allà complim amb l’objectiu de la sortida: disfressar-nos de fantasmes a la muntanya. Aquí el Guillem va pispar alguns llençols mèdics de la seva feina, però això no ho direm gaire alt.</p>
+        <p>La tornada va ser per un altre camí, fent la sortida circular, i anàvem parant mirant les fulles dels arbres, tot just el Guillem s’havia comprat un llibre sobre arbres i els havíem d’identificar.</p>
+        <p>Va ser un dia de Tots Sants molt diferent que recordaré amb molta estima, pobre ase.</p>
+
+    </section>
+    <img src="recursos/scroll senderisme3.png" alt="Icona de Scroll" class="icona-scroll" id="iconaScroll" onclick="scrollToTop()">
+    
+    <script>
+        // Valors per ajustar la velocitat de moviment de la icona
+        var pantallaTotal = document.documentElement.scrollHeight; // Alçada total de la pàgina en píxels
+        var finestraVisible = window.innerHeight; // Alçada de la finestra visible en píxels
+        var ratioMoviment = finestraVisible / pantallaTotal; // Ratio de moviment (0 a 1, quan més petit, més ràpid)
+     
+        // Funció per actualitzar la posició de la icona
+        window.onscroll = function() {
+        var icona = document.getElementById('iconaScroll');
+        var scrollPosicio = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            
+        // Ajusta la posició vertical de la icona perquè arribi al final de la finestra visible
+        icona.style.top = (scrollPosicio * ratioMoviment) + 'px';
+        // Ajusta la posició horitzontal de la icona a la dreta
+        icona.style.right = '0px'; // Pots ajustar la distància desitjada a la dreta
+        };
+        // Funció per fer scroll cap amunt
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        // Selecciona l'element de la icona de scroll cap amunt
+        var iconaScroll = document.getElementById('iconaScroll');
+        // Afegeix un event listener per a l'event 'click' que crida a la funció scrollToTop
+        iconaScroll.addEventListener('click', scrollToTop);
+    </script>
+    
+</body>
+</html>
