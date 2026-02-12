@@ -151,6 +151,8 @@ footer {
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    margin-right: 5%; 
+    margin-left: 5%;
 }
 .contenidor-recomanacionssortides a {
     display: flex;  /* Make <a> a flex container */
