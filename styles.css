@@ -103,13 +103,15 @@ footer {
      min-width: 200px; /* Distància mínima abans de la distribució en múltiples línies */
  }
 
+/* organització de sortides per carpetes */
 .contenidor-sortidesetiqueta {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
     float: center;
-
+    margin-right: 5%; 
+    margin-left: 5%;
     justify-content: space-evenly; /* Centrem horitzontalment el contingut */
     align-items: center; /* Centrem verticalment el contingut */
 
